@@ -1,0 +1,96 @@
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	&_inner {
+		padding: 55px 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&_wrapper {
+		min-width: 600px;
+		color: $white;
+	}
+	&_info {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+	&_lang {
+		display: flex;
+		li:not(:last-child) {
+			padding-right: 13px;
+		}
+	}
+	&_contacts {
+		display: flex;
+		font-size: 16px;
+		.address {
+			padding-right: 20px;
+		}
+		.tel {
+			font-weight: 700;
+			position: relative;
+			margin-right: 20px;
+			&::before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: #E6E6F0;
+				position: absolute;
+				bottom: 38%;
+    			left: -11px;
+			}
+				&::after {
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: #E6E6F0;
+				position: absolute;
+				top: 30%;
+				right: -11px;
+			}
+		}
+	}
+	&_menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		font-weight: 700;
+	li:not(:nth-child(5)) {
+		margin-right: 30px;
+		}
+	}
+	&_icon {
+		width: 24px;
+		height: 24px;
+		fill: $white;
+		margin: 0;
+	}
+}
+.lang_link {
+	font-weight: 700;
+	&__active {
+			min-width: 29px;
+			padding: 5px 6px;
+			border-radius: 8px;
+			background-color: $red;
+	}
+}
+.nav_link:hover {
+	color: $red;
+	padding-bottom: 3px;
+	border-bottom: 2px solid $red;
+	transition: .3s linear;
+	&:active {
+	color: $red;
+	padding-bottom: 3px;
+	border-bottom: 2px solid $red;
+	transition: .3s linear;
+	}
+}

@@ -1,0 +1,16 @@
+.header-page {
+
+	&_logo{
+		position: relative;
+		&::after {
+			content: '';
+			border-right: 2px solid $red;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+
+}

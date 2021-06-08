@@ -1,0 +1,64 @@
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	text-decoration: none;
+	transition: $trans;
+  	&:hover{
+	  text-decoration: none;
+}
+	&__blue {
+		width: 100%;
+		max-width: 250px;
+		padding: 17px 0;
+		font-size: 14px;
+		font-weight: 700;
+		background-color: $blue;
+		color: $white;
+		border-radius: 12px;
+		position: absolute;
+		bottom: 33%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 1;
+		&:hover {
+			background-color: #0085FF;
+			box-shadow: 0px 0px 30px rgba(36, 163, 255, 0.5);
+			transition: $trans;
+		}
+		&:active {
+			background-color: #006CCF;
+			transition: $trans;
+		}
+	}
+&_scroll {
+	width: 42px;
+	height: 42px;
+	opacity: 0.5;
+	border: 1px solid #FFFFFF;
+	border-radius: 50%;
+	margin: auto;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	z-index: 5;
+ 		&::after {
+			content: '';
+			border: solid $white;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 8px;
+			transform: rotate(45deg);
+			position: absolute;
+			bottom: 12px;
+		   left: 11px;
+			z-index: 1;
+		
+	}
+}
+}

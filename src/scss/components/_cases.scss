@@ -1,0 +1,17 @@
+.cases {
+	margin-bottom: 30px;
+	&_wrapper {
+		background-color: #F5F5FA;
+		border-radius: 12px;
+	}
+	&_itm {
+		border: 1px solid $white;
+		&:nth-child(4) {
+			flex-shrink: 2;
+		}
+	}
+	&_nav {
+		color: $red;
+		border-bottom: 1px solid $white;
+	}
+}

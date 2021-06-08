@@ -1,0 +1,63 @@
+.slider {
+	margin-bottom: 41px;
+&_itm {
+	background-color: #F5F5FA;
+	border-radius: 12px;
+	display: flex;
+}
+&_content {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 63%;
+	max-width: 63%;
+	padding: 40px 0 0 40px;
+}
+&_nav {
+	color: $blue;
+	&::after {
+		content: '';
+		border: solid $blue;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(-45deg);
+		position: absolute;
+		top: 4px;
+		left: 82px;
+		z-index: 1;
+	}
+}
+}
+.owl-carousel {
+	width: 100%;
+	margin: auto;
+}
+.owl-item {
+	width: 964px;
+}
+.owl-wrapper-outer{
+	margin-bottom: 20px;
+}
+ .owl-pagination {
+	 display: flex;
+	 justify-content: center;
+	 align-items: flex-end;
+}
+ .owl-page {
+	 width: 16px;
+	 height: 16px;
+	 border-radius: 50%;
+	 background-color: rgba(36, 163, 255, .2);
+	 &:hover {
+		background-color: rgba(36, 163, 255, .6); 
+		transition: $trans;
+	 }
+ }
+ .owl-page:not(:nth-child(1)) {
+	 margin-left: 14px;
+ }
+ .active {
+	background-color: $blue;
+ }
+
+
