@@ -5,7 +5,7 @@
 	left: 0;
 	z-index: 500;
 	&_inner {
-		padding: 55px 60px;
+		padding: 55px 0px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -14,20 +14,43 @@
 		min-width: 600px;
 		color: $white;
 	}
+	&_logo {
+		display: flex;
+		align-items: center;
+		&__main {
+			position: relative;
+			&::after {
+				content: '';
+				border: 3px solid $red;
+				width: 30%;
+				transform: rotate(110deg);
+				position: absolute;
+				top: 20px;
+    			right: -38px;
+				z-index: 1;
+			}
+		}
+	}
 	&_info {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 16px;
+		&__main {
+			color: $gray;
+		}
 	}
 	&_lang {
 		display: flex;
-		li:not(:last-child) {
+			li:not(:last-child) {
 			padding-right: 13px;
 		}
 	}
 	&_contacts {
 		display: flex;
 		font-size: 16px;
+		align-items: center;
+	
 		.address {
 			padding-right: 20px;
 		}
@@ -62,6 +85,9 @@
 		flex-direction: row;
 		justify-content: flex-end;
 		font-weight: 700;
+		&__main {
+			color: $blue;
+		}
 	li:not(:nth-child(5)) {
 		margin-right: 30px;
 		}
@@ -71,6 +97,9 @@
 		height: 24px;
 		fill: $white;
 		margin: 0;
+		&__main {
+			fill: $gray;
+		}
 	}
 }
 .lang_link {
@@ -80,6 +109,9 @@
 			padding: 5px 6px;
 			border-radius: 8px;
 			background-color: $red;
+			&__main {
+				color: $white;
+			}
 	}
 }
 .nav_link:hover {

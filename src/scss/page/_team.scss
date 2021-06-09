@@ -1,0 +1,51 @@
+.team {
+	width: 100%;
+	padding-top: 200px;
+
+	&_header {
+		width: 100%;
+		max-width: 864px;
+		margin: 0 auto 80px;
+	}
+	&_card {
+		width: 100%;
+		min-width: 1085px;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 80px;
+	}
+	&_member {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 50%;
+		margin-left: 41px;
+	}
+	&_contacts {
+		display: flex;
+	}
+	.page_nav__violet {
+		text-align: left;
+	}
+	.page_text__black{
+		font-size: 18px;
+	}
+	.wrapper {
+		margin-bottom: 60px;
+	
+	&_itm {
+		position: relative;
+		&:not(:nth-child(2n+4)):not(:nth-child(5)) {
+			margin-bottom: 40px;
+		}
+		&:not(:nth-child(3n+3)) {
+			margin-right: 40px;
+		}	
+		img {
+			padding-bottom: 20px;
+		}
+	 }
+ }
+}

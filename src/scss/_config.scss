@@ -73,7 +73,7 @@ img {
 .section_gradient {
 	width: 100%;
 	height: auto;
-	padding: 120px 0 80px;
+	padding: 170px 0 80px;
 	margin: 0;
 	background-image: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
 
@@ -81,6 +81,7 @@ img {
 	width: 100%;
 	height: auto;
 	margin: 0 auto 60px;
+	padding-bottom: 80px;
 	background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 	position: relative;
 	z-index: 10;
@@ -135,11 +136,44 @@ img {
 	 display: flex;
 	 flex-basis: 100%;
 	 max-width: 100%;
+	 flex-direction: row;
+	 justify-content: center;
 	 flex-wrap: wrap;
  	 &_itm {
-		flex: 0 0  calc(100% / 3);
+		display: flex;
 		max-width: calc(100% / 3);
 		flex-direction: column;
+	 }
+	 &_col {
+		flex: 0 0  calc(100% / 2);
+		max-width: calc(100% / 2);
+		flex-direction: column; 
+		&__colleft {
+			display: flex;
+			flex-basis: 53%;
+			max-width: 53%;
+			justify-content: center;
+			padding-right: 42px;
+		}
+		&__colright {
+			display: flex;
+			flex-basis: 30%;
+			max-width: 30%;
+			justify-content: center;
+			position: relative;
+			padding-left: 20px;
+			&::before {
+				content: '';
+				display: block;
+				border: 2px solid #E6E6F0;
+				transform: rotate(0deg);
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
 	 }
 
  }
@@ -157,9 +191,25 @@ img {
 	}
  }
  .page_text {
-	font-size: 21px;
-	line-height: 30px;
-	color: $white;
+	font-size: 18px;
+	line-height: 22px;
+	color: $main;
+	&__white {
+		font-size: 21px;
+		line-height: 30px;
+		color: $white;
+	}
+	&__whiteS {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26px;
+		color: $white;
+	}
+	&__black {
+		font-size: 21px;
+		line-height: 30px;
+		color: $black;
+	}
 	&__big-500 {
 		font-size: 18px;
 		width: 500px;

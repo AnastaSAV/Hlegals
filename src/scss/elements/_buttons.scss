@@ -61,4 +61,27 @@
 		
 	}
 }
+&_team {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #F5F5FA;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+ 		&::after {
+			content: '';
+			border: solid $blue;
+			border-width: 0 3px 3px 0;
+			display: inline-block;
+			padding: 5px;
+			transform: rotate(-45deg);
+			position: absolute;
+			bottom: 10px;
+    		right: 11px;
+			z-index: 1;
+		
+	}
+}
 }

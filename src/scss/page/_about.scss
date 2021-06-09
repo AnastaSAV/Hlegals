@@ -1,16 +1,51 @@
-.header-page {
+.about {
+	width: 100%;
+	padding-top: 255px;
 
-	&_logo{
-		position: relative;
-		&::after {
-			content: '';
-			border-right: 2px solid $red;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
+	&_itm {
+		&:not(:last-child) {
+			margin-bottom: 40px;
 		}
 	}
-
+	&_title {
+		padding-left: 50px;
+	}
+	&_banner {
+		display: block;
+		width: 100%;
+		background-image: url('../../img/about_img.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-bottom: 80px;
+	}
+	&_link {
+			display: block;
+			width: 100%;
+			font-size: 96px;
+			font-weight: 700;
+			line-height: 113px;
+			text-align: center;
+			letter-spacing: 63px;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, .8);
+			text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+			padding: 163px 0;
+			&:hover {
+				color: $white;
+				opacity: 1;
+	    		transition: $trans;
+			}
+	}
+	&_slider {
+		display: block;
+		padding: 76px 80px 30px;
+		background-color: #F5F5FA;
+		.owl-wrapper-outer {
+			margin-bottom: 30px;
+		}
+	.owl-item {
+		width: 515px;
+	}
+	}
 }

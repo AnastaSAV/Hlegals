@@ -20,6 +20,13 @@ MicroModal.init({
 		loop: true,
 		nav: true,
 	})
+ }),
+ $(document).ready(function(){
+	$("#sliderAbout").owlCarousel({
+		items: 4,
+		loop: true,
+		nav: true,
+	})
  })
 
 });
