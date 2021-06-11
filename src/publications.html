@@ -9,16 +9,57 @@
 	<title>Публікації</title>
 </head>
 <body>
-@@include('_header.html')
+	<svg style="display: none;">
+		<symbol id="facebook" viewBox="0 0 24 24">
+			<g>
+				<path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"/>
+			</g>
+		</symbol>
+	</svg>
+	<header class="header">
+		<div class="container-fluid">
+		<div class="header_inner">
+			<a href="index.html" class="header_logo__main">
+				<img src="img/page_logo.png" alt="logo"></a>
+				<div class="header_wrapper">
+					<div class="header_info header_info__main">
+						<ul class="header_lang">
+							 <li><a class="lang_link lang_link__active lang_link__active__main" href="#">Ук</a></li>
+							 <li><a class="lang_link" href="#">Ru</a></li>
+							 <li><a class="lang_link" href="#">En</a></li>
+						</ul>
+				  <div class="header_contacts header_contacts__main">
+					  <p class="address">Одеса, Адміральський пр., 3</p>
+					  <p class="tel">	+38 (050) 390 15 91</p>
+					  <a href="#" class="header_link">
+						<svg class="header_icon header_icon__main">
+							<use xlink:href="#facebook"></use>
+						</svg>
+					  </a>
+				  </div>
+				</div>
+				  <nav class="header_nav">
+					  <ul class="header_menu header_menu__main">
+						  <li><a href="about.html" class="nav_link nav_link__main">о нас</a></li>
+						  <li><a href="" class="nav_link nav_link__main" target="blank">послуги</a></li>
+						  <li><a href="team.html" class="nav_link nav_link__main" target="blank">команда</a></li>
+						  <li><a href="" class="nav_link nav_link__main active">публікації</a></li>
+						  <li><a href="" class="nav_link nav_link__main">контакти</a></li>
+					  </ul>
+				  </nav>
+				</div>
+		</div>
+	</div>
+	</header>
 <div class="articles">
 	<div class="container-fluid">
 		<input type="range">
 		<label for="range"></label>
-		<div class="articles_wrapper">
-			<article class="articles_itm wrapper_itm">
+		<div class="wrapper">
+			<article class="wrapper_itm">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Валютний контроль помер, хай живе валютний контроль!</p>
+					<p class="articles_title">Валютний контроль помер, хай живе валютний контроль!</p>
 					<span class="articles_date">14 червня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -27,11 +68,11 @@
 				</div>
 			</article> 
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_1.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Заповіт міленіала</p>
+					<p class="articles_title">Заповіт міленіала</p>
 					<span class="articles_date">19 серпня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -40,10 +81,10 @@
 				</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Валютний контроль помер, хай живе валютний контроль!</p>
+					<p class="articles_title">Валютний контроль помер, хай живе валютний контроль!</p>
 					<span class="articles_date">14 червня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -51,11 +92,11 @@
 				</blockquote>
 				</div>
 			</article> 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_1.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Заповіт міленіала</p>
+					<p class="articles_title">Заповіт міленіала</p>
 					<span class="articles_date">19 серпня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -64,11 +105,11 @@
 				</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_2.png" alt="">
 				<div class="articles_content">
 			<div class="articles_header">
-				<p class="item_title item_title__small">Equity associate</p>
+				<p class="articles_title">Equity associate</p>
 				<span class="articles_date">22 квітня</span>
 			</div>
 				<blockquote class="articles_text">
@@ -77,11 +118,11 @@
 			</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_3.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Закон про мови: як зробити свій сайт відповідним</p>
+					<p class="articles_title">Закон про мови: як зробити свій сайт відповідним</p>
 					<span class="articles_date">19 серпня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -90,11 +131,11 @@
 				</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_2.png" alt="">
 				<div class="articles_content">
 			<div class="articles_header">
-				<p class="item_title item_title__small">Equity associate</p>
+				<p class="articles_title">Equity associate</p>
 				<span class="articles_date">22 квітня</span>
 			</div>
 				<blockquote class="articles_text">
@@ -103,11 +144,11 @@
 			</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_3.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Закон про мови: як зробити свій сайт відповідним</p>
+					<p class="articles_title">Закон про мови: як зробити свій сайт відповідним</p>
 					<span class="articles_date">19 серпня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -115,11 +156,11 @@
 				</blockquote>
 				</div>
 			</article>
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_4.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR</p>
+					<p class="articles_title">Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR</p>
 					<span class="articles_date">29 вересня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -128,11 +169,11 @@
 				</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_5.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Компенсація витрат на навчання дитини в дитячому садку та школі!</p>
+					<p class="articles_title">Компенсація витрат на навчання дитини в дитячому садку та школі!</p>
 					<span class="articles_date">05 лютого</span>
 				</div>
 				<blockquote class="articles_text">
@@ -140,11 +181,11 @@
 				</blockquote>
 				</div>
 			</article>
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_4.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR</p>
+					<p class="articles_title">Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR</p>
 					<span class="articles_date">29 вересня</span>
 				</div>
 				<blockquote class="articles_text">
@@ -153,11 +194,11 @@
 				</div>
 			</article>
 
-			<article class="articles_itm wrapper_itm">
+			<article class="wrapper_itm">
 				<img src="img/art_1_5.png" alt="">
 				<div class="articles_content">
 				<div class="articles_header">
-					<p class="item_title item_title__small">Компенсація витрат на навчання дитини в дитячому садку та школі!</p>
+					<p class="articles_title">Компенсація витрат на навчання дитини в дитячому садку та школі!</p>
 					<span class="articles_date">05 лютого</span>
 				</div>
 				<blockquote class="articles_text">

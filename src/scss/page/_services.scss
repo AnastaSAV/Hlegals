@@ -1,3 +1,41 @@
+.services {
+	&_nav {
+		color: rgba(255, 255, 255, .5);
+		&::after {
+			content: '';
+			border: solid rgba(255, 255, 255, .5);
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 4px;
+			right: -10px;
+			z-index: 1;
+			}
+	}
+		&_header {
+			margin-bottom: 68px;
+	}
+		
+	&_link {
+	display: inline-flex;
+	width: 92px;
+	height: 92px;
+	padding: 14px;
+	background-color: $white;
+	border: 1px solid transparent;
+	border-radius: 24px;
+	margin-bottom: 20px;
+	}
+	.wrapper {
+		&_itm {
+		&:not(:nth-child(2n+4)):not(:nth-child(5)) {
+		margin-bottom: 40px;
+}
+	}
+	}
+}
 
 
 

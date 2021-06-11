@@ -1,6 +1,23 @@
 .about {
 	width: 100%;
-	padding-top: 255px;
+	padding-top: 220px;
+	.wrap {
+		margin-bottom: 100px;
+			&_col__small {
+				padding: 0 0 0 20px;
+				&::after {
+					content: '';
+					display: block;
+					border: 2px solid #E5E5E5;
+					transform: rotate(0deg);
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+			}
+		}		
+	}
 
 	&_itm {
 		&:not(:last-child) {

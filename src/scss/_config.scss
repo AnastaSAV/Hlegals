@@ -62,58 +62,14 @@ li {
 	list-style-type: none;
 }
 a {
+	font-size: 16px;
+	color: $blue;
 	text-decoration: none;
-	color: inherit;
 	cursor: pointer;
 }
 img {
 	max-width: 100%;
 	display: block;
-}
-.section_gradient {
-	width: 100%;
-	height: auto;
-	padding: 170px 0 80px;
-	margin: 0;
-	background-image: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
-
-&__reverse {
-	width: 100%;
-	height: auto;
-	margin: 0 auto 60px;
-	padding-bottom: 80px;
-	background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-	position: relative;
-	z-index: 10;
-	&::after {
-		content: '';
-		display: block;
-		width: 98%;
-		height: 10px;
-		background-color: #CACADB;
-		border-radius: 0px 0px 12px 12px;
-		position: absolute;
-		bottom: -10px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		z-index: 5;
-	}
-	&::before {
-		content: '';
-		display: block;
-		width: 96%;
-		height: 10px;
-		background-color: #E7E7F2;
-		border-radius: 0px 0px 12px 12px;
-		position: absolute;
-		bottom: -19px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		z-index: 1;
-	}
-}
 }
 .container {
    width: 100%;
@@ -132,22 +88,16 @@ img {
 	max-width: 1350px;
 	min-width: 320px;
  }
+//  Row-wrapper
  .wrapper {
 	 display: flex;
-	 flex-basis: 100%;
-	 max-width: 100%;
-	 flex-direction: row;
-	 justify-content: center;
 	 flex-wrap: wrap;
+	justify-content: space-between;
  	 &_itm {
 		display: flex;
-		max-width: calc(100% / 3);
+		max-width: 30%;
 		flex-direction: column;
 	 }
-	 &_col {
-		flex: 0 0  calc(100% / 2);
-		max-width: calc(100% / 2);
-		flex-direction: column; 
 		&__colleft {
 			display: flex;
 			flex-basis: 53%;
@@ -174,17 +124,38 @@ img {
 				z-index: 1;
 			}
 		}
-	 }
-
+	}
+//  Colums_wrap
+ .wrap {
+	 display: flex;
+	 flex-flow: row nowrap;
+	 justify-content: space-evenly;
+	 align-items: center;
+	 &_col {
+		 display: flex;
+		 flex-direction: column; 
+ 
+ &__small {
+			flex: 0 0 35%;
+			max-width: 35%;
+			padding-right: 40px;
+			position: relative;
+ 		}
+	
+&__big {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+}
  }
  .title_gradient {
+	display: block;
 	font-size: 42px;
 	font-weight: 700;
 	line-height: 50px;
 	background: $gradient-title;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	display: block;
 	&__reverse {
 		background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
 		background-clip: text;
@@ -244,15 +215,6 @@ img {
 	color: $blue;
 	&__large{
 		margin-bottom: 15px;
-	}
-	&__small {
-		font-size: 18px;
-		line-height: 22px;
-		margin-bottom: 10px;
-	}
-	&__violet {
-		color: $mainSoft;
-		margin-bottom: 20px;
 	}
  }
  .page_nav {

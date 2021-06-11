@@ -9,7 +9,41 @@
 	<title>Команда</title>
 </head>
 <body>
-@@include('_header.html')
+	<header class="header">
+		<div class="container-fluid">
+		<div class="header_inner">
+			<a href="index.html" class="header_logo">
+				<img src="img/Logo Min.png" alt="logo"></a>
+				<div class="header_wrapper">
+					<div class="header_info">
+						<ul class="header_lang">
+							 <li><a class="lang_link lang_link__active" href="#">Ук</a></li>
+							 <li><a class="lang_link" href="#">Ru</a></li>
+							 <li><a class="lang_link" href="#">En</a></li>
+						</ul>
+				  <div class="header_contacts">
+					  <p class="address">Одеса, Адміральський пр., 3</p>
+					  <p class="tel">	+38 (050) 390 15 91</p>
+					  <a href="#" class="header_link">
+						<svg class="header_icon">
+							<use xlink:href="#facebook"></use>
+						</svg>
+					  </a>
+				  </div>
+				</div>
+				  <nav class="header_nav">
+					  <ul class="header_menu">
+						  <li><a href="about.html" class="nav_link" target="_blank">о нас</a></li>
+						  <li><a href="services.html" class="nav_link active" target="_blank">послуги</a></li>
+						  <li><a href="team.html" class="nav_link" target="_blank">команда</a></li>
+						  <li><a href="publications.html" class="nav_link" target="_blank">публікації</a></li>
+						  <li><a href="" class="nav_link">контакти</a></li>
+					  </ul>
+				  </nav>
+				</div>
+		</div>
+	</div>
+	</header>
 @@include('_footer.html')
 <script src="js/app.min.js"></script>
 <script src="js/libs.min.js"></script>

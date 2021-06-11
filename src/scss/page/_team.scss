@@ -1,31 +1,36 @@
 .team {
 	width: 100%;
 	padding-top: 200px;
-
+	margin-bottom: 80px;
+	.wrap_col__small {
+		padding: 0;
+	}
 	&_header {
 		width: 100%;
 		max-width: 864px;
 		margin: 0 auto 80px;
 	}
-	&_card {
-		width: 100%;
-		min-width: 1085px;
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 80px;
-	}
-	&_member {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		max-width: 50%;
-		margin-left: 41px;
-	}
 	&_contacts {
 		display: flex;
+		justify-content: space-evenly;
+		border-bottom: 2px solid #E6E6F0;
+		padding: 10px 0 20px;
+		margin-bottom: 40px;
+		a {
+			position: relative;
+		}
+			a:first-child:after {
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: #E6E6F0;
+				position: absolute;
+				top: 30%;
+			   right: -11px;
 	}
+	
+}
 	.page_nav__violet {
 		text-align: left;
 	}
@@ -40,12 +45,9 @@
 		&:not(:nth-child(2n+4)):not(:nth-child(5)) {
 			margin-bottom: 40px;
 		}
-		&:not(:nth-child(3n+3)) {
-			margin-right: 40px;
-		}	
+			}	
 		img {
 			padding-bottom: 20px;
 		}
 	 }
  }
-}
