@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
 MicroModal.init({
@@ -14,19 +13,23 @@ MicroModal.init({
 	debugMode: true, // [10]
  });
 
+
  $(document).ready(function(){
 	$("#slider").owlCarousel({
 		items: 1,
 		loop: true,
 		nav: true,
 	})
- }),
+ });
+
+
  $(document).ready(function(){
 	$("#sliderAbout").owlCarousel({
 		items: 4,
 		loop: true,
 		nav: true,
 	})
- })
-
+ });
 });
+
+

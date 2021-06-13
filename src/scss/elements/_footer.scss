@@ -9,13 +9,46 @@
 	}
 	&_contacts {
 		display: flex;
-		flex: 0 0 32%;
-		max-width: 32%;
+		flex: 0 0 33%;
+		max-width: 33%;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		align-items: flex-end;
 	}
-	&_nav {
+	.page_nav {
 		color: $blue;
+		&::before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: #B3B3BA;
+			position: absolute;
+			top: 40%;
+			left: -15px;
+}
 	}
+	.tel {
+		position: relative;
+		&::before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: #B3B3BA;
+			position: absolute;
+			top: 40%;
+			left: -10px;
+		}
+			&::after {
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: #B3B3BA;
+				position: absolute;
+				top: 40%;
+				right: -15px;
+	}
+}
 }

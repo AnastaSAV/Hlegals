@@ -1,6 +1,5 @@
 .team {
 	width: 100%;
-	padding-top: 200px;
 	margin-bottom: 80px;
 	.wrap_col__small {
 		padding: 0;
@@ -12,25 +11,38 @@
 	}
 	&_contacts {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: flex-start;
+		align-items: center;
 		border-bottom: 2px solid #E6E6F0;
 		padding: 10px 0 20px;
 		margin-bottom: 40px;
-		a {
+	}
+		.contact_link {
+			margin-left: 26px;
 			position: relative;
-		}
-			a:first-child:after {
+		
+			&:nth-child(2)::after {
 				content: "";
 				width: 6px;
 				height: 6px;
 				border-radius: 50%;
 				background-color: #E6E6F0;
 				position: absolute;
-				top: 30%;
-			   right: -11px;
+				top: 40%;
+			   right: -15px;
 	}
-	
+	&:nth-child(2)::before {
+		content: "";
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #E6E6F0;
+		position: absolute;
+		top: 40%;
+		left: -15px;
 }
+}
+
 	.page_nav__violet {
 		text-align: left;
 	}
