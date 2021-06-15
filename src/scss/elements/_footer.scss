@@ -6,6 +6,10 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 32px 0 40px;
+		@include mmax(1300) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&_contacts {
 		display: flex;
@@ -14,6 +18,18 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: flex-end;
+		@include mmax(1300) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			flex-direction: column;
+			align-items: center;
+		}
+		@include mmax(992) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	.page_nav {
 		color: $blue;
@@ -27,6 +43,10 @@
 			top: 40%;
 			left: -15px;
 }
+		&:hover {
+			color: $red;
+			transition: $trans;
+		}
 	}
 	.tel {
 		position: relative;

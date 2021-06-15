@@ -1,13 +1,13 @@
 .team {
 	width: 100%;
 	margin-bottom: 80px;
+	&_header {
+			width: 100%;
+			max-width: 864px;
+			margin: 0 auto 80px;
+	}
 	.wrap_col__small {
 		padding: 0;
-	}
-	&_header {
-		width: 100%;
-		max-width: 864px;
-		margin: 0 auto 80px;
 	}
 	&_contacts {
 		display: flex;
@@ -42,7 +42,6 @@
 		left: -15px;
 }
 }
-
 	.page_nav__violet {
 		text-align: left;
 	}
@@ -51,6 +50,9 @@
 	}
 	.wrapper {
 		margin-bottom: 60px;
+		@include mmax(1999) {
+			justify-content: space-evenly;
+		}
 	
 	&_itm {
 		position: relative;

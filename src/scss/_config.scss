@@ -93,10 +93,19 @@ img {
 	 display: flex;
 	 flex-wrap: wrap;
 	justify-content: space-between;
+		@include mmax(1199) {
+		justify-content: center;
+	}
  	 &_itm {
 		display: flex;
 		max-width: 30%;
 		flex-direction: column;
+		@include mmax(1199) {
+			max-width: 40%;
+		}
+		@include mmax(768) {
+			max-width: 100%;
+		}
 	 }
 		&__colleft {
 			display: flex;
@@ -131,23 +140,36 @@ img {
 	 flex-flow: row nowrap;
 	 justify-content: space-evenly;
 	 align-items: center;
+	 @include mmax(768) {
+		flex-direction: column;
+}
 	 &_col {
 		 display: flex;
 		 flex-direction: column; 
- 
- &__small {
+		 @include mmax(768) {
+			flex: 0 0 100%;
+			max-width: 100%;
+	}
+			 &__small {
 			flex: 0 0 35%;
 			max-width: 35%;
 			padding-right: 40px;
 			position: relative;
+			@include mmax(992) {
+				flex: 0 0 40%;
+				max-width: 40%;
+			}
  		}
-	
-&__big {
+	&__big {
 			flex: 0 0 50%;
 			max-width: 50%;
+			@include mmax(992) {
+				flex: 0 0 40%;
+				max-width: 40%;
 		}
+		}
+ 	}
 }
- }
  .pt_180px {
 	 padding-top: 180px;
  }
@@ -239,6 +261,18 @@ img {
 	color: $blue;
 	&__bold {
 		font-weight: 700;
+		&:hover {
+			color: $red;
+			transition: $trans;
+		}
+	}
+	&__big {
+		font-size: 21px;
+		line-height: 30px;
+		&:hover {
+			color: $red;
+			transition: $trans;
+		}
 	}
 }
  //  Sprite
@@ -248,16 +282,59 @@ img {
 	height: 38px;
 	fill: $blue;
 	margin-top: 18px;
+	&:hover {
+		fill: $red;
+		transition: $trans;
+	}
 }
 .form {
 	display: flex;
 	flex-direction: column;
+	max-width: 80%;
 	align-items: stretch;
 	background-color: #F5F5FA;
 	border: 1px solid transparent;
 	border-radius: 12px;
 	padding: 20px;
+	position: relative;
+	#name, #telNumb, #eMail {
+		font-size: 18px;
+		line-height: 26px;
+		color: $gray;
+		background-color: $white;
+		border: none;
+		outline: none;
+		border-radius: 8px;
+		padding: 11px;
+		margin-bottom: 20px;
+		&:invalid {
+			border: 2px solid $red;
+		}
+	}
+	#textArea {
+		resize: vertical;
+		font-size: 18px;
+		line-height: 26px;
+		color: #000;
+		background-color: $white;
+		border: none;
+		outline: none;
+		border-radius: 8px;
+		margin-bottom: 20px;
+	}
+	label[for=telNumb] {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 17px;
+		letter-spacing: 1px;
+		color: $gray;
+		text-transform: uppercase;
+		text-indent: 15px;
+		padding-bottom: 10px;
+	}
 }
 .map {
 	width: 100%;
 }
+
+

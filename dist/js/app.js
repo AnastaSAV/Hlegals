@@ -13,6 +13,7 @@ MicroModal.init({
 	debugMode: true, // [10]
  });
 
+
  $(document).ready(function(){
 	$("#slider").owlCarousel({
 		items: 1,
@@ -20,7 +21,8 @@ MicroModal.init({
 		nav: true,
 	})
  });
-	
+
+
  $(document).ready(function(){
 	$("#sliderAbout").owlCarousel({
 		items: 4,

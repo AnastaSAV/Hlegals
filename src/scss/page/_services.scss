@@ -1,4 +1,13 @@
 .services {
+	width: 100%;
+	&_banner {
+		width: 100%;
+		background: linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%, #643E72 87.46%), url('../../img/s_cardBg.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 80px;
+	}
 	&_nav {
 		color: rgba(255, 255, 255, .5);
 		&::after {
@@ -17,7 +26,21 @@
 		&_header {
 			margin-bottom: 68px;
 	}
-		
+	&_head {
+		width: 100%;
+		max-width: 864px;
+		margin: 0 auto;
+		padding-bottom: 80px;
+		text-align: center;
+		position: relative;
+		.btn__blue {
+			position: absolute;
+			bottom: -5%;
+			left: 0;
+			right: 0;
+			z-index: 1;
+		}
+	}
 	&_link {
 	display: inline-flex;
 	width: 92px;
@@ -29,13 +52,51 @@
 	margin-bottom: 20px;
 	}
 	.wrapper {
+		@include mmax(1199) {
+		justify-content: space-evenly;
+		}
 		&_itm {
 		&:not(:nth-child(2n+4)):not(:nth-child(5)) {
 		margin-bottom: 40px;
-}
+		}
 	}
+}
+&_title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+	color: $white;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	border-top: 4px solid rgba(255, 255, 255, .5);
+}
+	&_list {
+		display: block;
+		columns: 2;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26px;
+		color: $white;
+		@include mmax(768) {
+		columns: 1;
+		}
+			li {
+			position: relative;
+			margin-bottom: 20px;
+			&::before {
+			content: '';
+			display: block;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $red;
+			position: absolute;
+			top: 50%;
+			left: -14px;
+			z-index: 1;
+		}
 	}
 }
-
+}
 
 

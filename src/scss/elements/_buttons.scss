@@ -19,12 +19,7 @@
 		background-color: $blue;
 		color: $white;
 		border-radius: 12px;
-		position: absolute;
-		bottom: 2%;
-		left: 0;
-		right: 0;
 		margin: auto;
-		z-index: 1;
 		&:hover {
 			background-color: #0085FF;
 			box-shadow: 0px 0px 30px rgba(36, 163, 255, 0.5);

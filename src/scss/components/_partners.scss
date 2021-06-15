@@ -5,6 +5,18 @@
 		max-width: 25%;
 		height: 120px;
 		background-color: transparent;
+		@include mmax(992) {
+			flex: 0 0 calc(100% / 3);
+		   max-width: calc(100% / 3);
+		}
+		@include mmax(806) {
+			flex: 0 0 calc(100% / 2);
+		   max-width: calc(100% / 2);
+		}
+		@include mmax(576) {
+			flex: 0 0 calc(100% / 1);
+		   max-width: calc(100% / 1);
+		}
 		&:nth-child(1) {
 			background-color: #1C4280;
 		}

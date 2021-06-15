@@ -19,18 +19,22 @@
 	<header class="header">
 		<div class="container-fluid">
 		<div class="header_inner">
-			<a href="index.html" class="header_logo__main">
-				<img src="img/page_logo.png" alt="logo"></a>
+			<div class="header_logo__inner">
+				<a href="index.html" class="header_logo__main">
+					<img src="img/page_logo.png" alt="logo"></a>
+					<a class="header_logo__nav" href="teamCard.html">команда</a>
+					<img src="img/logo_small.png" alt="">
+				</div>
 				<div class="header_wrapper">
 					<div class="header_info header_info__main">
 						<ul class="header_lang">
-							 <li><a class="lang_link lang_link__active lang_link__active__main" href="#">Ук</a></li>
-							 <li><a class="lang_link" href="#">Ru</a></li>
-							 <li><a class="lang_link" href="#">En</a></li>
+							 <li><a class="lang_link lang_link__main active" href="#">Ук</a></li>
+							 <li><a class="lang_link lang_link__main" href="#">Ru</a></li>
+							 <li><a class="lang_link lang_link__main" href="#">En</a></li>
 						</ul>
 				  <div class="header_contacts header_contacts__main">
 					  <p class="address">Одеса, Адміральський пр., 3</p>
-					  <p class="tel">	+38 (050) 390 15 91</p>
+					  <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
 					  <a href="#" class="header_link">
 						<svg class="header_icon header_icon__main">
 							<use xlink:href="#facebook"></use>
@@ -40,19 +44,19 @@
 				</div>
 				  <nav class="header_nav">
 					  <ul class="header_menu header_menu__main">
-						  <li><a href="about.html" class="nav_link nav_link__main">о нас</a></li>
+						  <li><a href="about.html" class="nav_link nav_link__main" target="blank">о нас</a></li>
 						  <li><a href="services.html" class="nav_link nav_link__main" target="blank">послуги</a></li>
 						  <li><a href="team.html" class="nav_link nav_link__main active" target="blank">команда</a></li>
-						  <li><a href="publications.html" class="nav_link nav_link__main">публікації</a></li>
-						  <li><a href="" class="nav_link nav_link__main">контакти</a></li>
+						  <li><a href="publications.html" class="nav_link nav_link__main" target="blank">публікації</a></li>
+						  <li><a href="contacts.html" class="nav_link nav_link__main" target="blank">контакти</a></li>
 					  </ul>
 				  </nav>
 				</div>
 		</div>
 	</div>
 	</header>
-
-		<div class="team pt_180px">
+<div class="section">
+		<div class="team">
 			<div class="container-fluid">
 				<div class="wrap">
 					<div class="wrap_col wrap_col__small">
@@ -79,24 +83,32 @@
 			</div>
 		</div>
 		</div>
+	</div>
 	<footer class="footer">
 	<div class="container-fluid">
 		<div class="footer_inner">
 				<div class="footer_contacts">
 					<p>Одеса, Адміральський пр., 3</p>
-					<a href="#" class="page_nav">Подивитися на мапі</a>
-					<a href="#" class="social_link">
+					<a href="contacts.html" class="page_nav">Подивитися на мапі</a>
+					<a href="https://www.facebook.com/" class="social_link" target="_blank">
 						<svg class="main_icon">
 							<use xlink:href="#facebook"></use>
 						</svg>
 					  </a>
-					  <p class="tel">+38 (050) 390 15 91</p>
-					  <a href="#" class="contact_link contact_link__bold">contact@hlegals.net</a>
+					  <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</ф>
+					  <a href="mailto:contact@hlegals.net" class="contact_link contact_link__bold" target="blank">contact@hlegals.net</a>
 					</div>
 					<p class="page_text__small-500"><sup>©</sup> 2021 ТОВ Юридична компанія «HLEGALS»</p>
 			</div>
 </div>
 </footer>
+<svg style="display: none;">
+	<symbol id="facebook" viewBox="0 0 32 32">
+		<g>
+			<path d="M27.1135 6.30549C26.9445 6.13749 26.7455 6.05299 26.5155 6.05299C26.401 6.05299 26.1595 6.14699 25.7925 6.33249C25.425 6.51849 25.035 6.72549 24.6245 6.95649C24.213 7.18599 23.726 7.39399 23.164 7.57999C22.6025 7.76549 22.0825 7.85949 21.604 7.85949C21.162 7.85949 20.772 7.77549 20.436 7.60699C19.3215 7.08499 18.352 6.69549 17.529 6.43849C16.706 6.18199 15.821 6.05299 14.8735 6.05299C13.2375 6.05299 11.374 6.58499 9.285 7.64699C8.854 7.86199 8.545 8.02849 8.345 8.15049L8.1465 6.69499C8.595 6.30549 8.8845 5.73799 8.8845 5.09749C8.8845 3.92399 7.9335 2.97299 6.76 2.97299C5.5865 2.97299 4.6355 3.92399 4.6355 5.09749C4.6355 5.86299 5.0445 6.52849 5.6515 6.90249L8.5215 27.9475C8.607 28.574 9.143 29.0285 9.7585 29.0285C9.8145 29.0285 9.8715 29.025 9.929 29.0175C10.613 28.9235 11.092 28.294 10.9985 27.61L9.845 19.1515C11.938 18.113 13.7485 17.5895 15.2715 17.5895C15.918 17.5895 16.5485 17.686 17.163 17.881C17.778 18.0765 18.2895 18.2885 18.6965 18.518C19.1035 18.748 19.584 18.961 20.1365 19.155C20.69 19.35 21.2365 19.4475 21.776 19.4475C23.139 19.4475 24.7715 18.934 26.674 17.9075C26.913 17.7835 27.088 17.6615 27.1985 17.542C27.309 17.4225 27.3645 17.2525 27.3645 17.0315V6.90299C27.3645 6.67349 27.281 6.47399 27.1135 6.30549Z" fill="#F0145A"/>
+		</g>
+	</symbol>
+</svg>
 	<script src="js/app.min.js"></script>
 <script src="js/libs.min.js"></script>
 </body>

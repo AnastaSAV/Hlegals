@@ -1,5 +1,8 @@
 .slider {
 	margin-bottom: 41px;
+	@include mmax(1199) {
+		display: none;
+	}
 &_itm {
 	background-color: #F5F5FA;
 	border-radius: 12px;
