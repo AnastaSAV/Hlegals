@@ -1,7 +1,6 @@
 .intro {
-	width: 100%;
 	margin-bottom: 80px;
-&_inner {
+	&_inner {
 		display: flex;
 		flex-wrap: nowrap;
 		flex: 0 0 90%;
@@ -9,7 +8,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 80px;
-   }
+	}
 	&_link {
 		display: block;
 		font-size: 42px;
@@ -17,8 +16,12 @@
 		line-height: 49px;
 		text-align: right;
 		color: $gray;
-			&:not(:last-child) {
-				margin: 0 0 20px;
+		position: relative;
+		@include mmax(1199) {
+			font-size: 32px;
+		}
+		&:not(:last-child) {
+			margin: 0 0 20px;
 		}
 		&:hover {
 			display: block;
@@ -29,27 +32,45 @@
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
 			transition: $trans;
+			@include mmax(1199) {
+				font-size: 32px;
+			}
+		}
+		&::after {
+			content: '';
+			opacity: 0;
+			height: 100%;
+			border-right: 4px solid $red;
+			position: absolute;
+			top: 0;
+			right: -40px;
+			z-index: 5;
+		}
+		&:hover::after {
+			opacity: 1;
+			transition: $trans;
 		}
 	}
-	 .active{
-		display: block;
-		font-size: 42px;
-		font-weight: 700;
-		line-height: 50px;
-		background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: $trans;
-	}
+	
 	&_title {
-				font-size: 32px;
-				font-weight: 500;
-				line-height: 38px;
-				color: $white;
-				margin-bottom: 20px;
-			}
+		font-size: 32px;
+		font-weight: 500;
+		line-height: 38px;
+		color: $white;
+		margin-bottom: 20px;
+		@include mmax(1199) {
+			font-size: 24px;
+		}
+		@include mmax(768) {
+			margin-bottom: 10px;
+		}
+	}
 	.wrap {
 		&_col__small {
+			@include mmax(768) {
+				max-width: 100%;
+				align-items: center;
+			}
 			&::after {
 				content: '';
 				display: block;
@@ -60,7 +81,33 @@
 				top: 0;
 				right: 0;
 				z-index: 1;
+				@include mmax(768) {
+					transform: translateY(100px) translateX(-250px) rotate(-90deg);
+				}
+			}
+		}		
+		&_col__big {
+			display: none;
+			&.visible {
+				display: flex;
+				@include mmax(768) {
+					max-width: 100%;
+					align-items: center;
+				}
+			}
 		}
-	}		
-}
+	}
+	.active_link {
+		display: block;
+		font-size: 42px;
+		font-weight: 700;
+		line-height: 50px;
+		background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: $trans;
+		@include mmax(1199) {
+			font-size: 36px;
+		}
+	}
 }

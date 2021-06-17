@@ -1,13 +1,10 @@
 .header {
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 500;
-	border: 1px solid rgba(104, 104, 135, .2);
-	border-radius: 0 0 10px 10px;
-	background: rgba(104, 104, 135, .8);
-	backdrop-filter: blur(3px);
+	
 	&_inner {
 		padding: 55px 0px 20px;
 		display: flex;
@@ -17,6 +14,9 @@
 	&_wrapper {
 		min-width: 600px;
 		color: $white;
+		@include mmax(768) {
+			min-width: auto;
+		}
 	}
 	&_logo {
 		display: flex;
@@ -32,7 +32,7 @@
 			margin-left: 20px;
 		}
 		&__main {
-		position: relative;
+			position: relative;
 			&::after {
 				content: '';
 				border: 3px solid $red;
@@ -40,7 +40,7 @@
 				transform: rotate(110deg);
 				position: absolute;
 				top: 20px;
-    			right: -40px;
+				right: -40px;
 				z-index: 1;
 			}
 		}
@@ -53,20 +53,31 @@
 		&__main {
 			color: $gray;
 		}
-	}
+		@include mmax(768) {
+			justify-content: flex-end;
+		}
+	} // _info
 	&_lang {
 		display: flex;
-			li:not(:last-child) {
+		li:not(:last-child) {
 			padding-right: 13px;
+		}
+		@include mmax(768) {
+			margin-right: 30px;
 		}
 	}
 	&_contacts {
 		display: flex;
 		font-size: 16px;
 		align-items: center;
-	
+		@include mmax(576) {
+			display: none;
+		}
 		.address {
 			padding-right: 20px;
+			@include mmax(768) {
+				display: none;
+			}
 		}
 		.tel {
 			font-weight: 700;
@@ -80,9 +91,9 @@
 				background-color: #E6E6F0;
 				position: absolute;
 				bottom: 38%;
-    			left: -11px;
+				left: -11px;
 			}
-				&::after {
+			&::after {
 				content: "";
 				width: 6px;
 				height: 6px;
@@ -93,19 +104,93 @@
 				right: -11px;
 			}
 		}
-	}
+	}  // Contacts
+	&_nav {
+		@include mmax(576) {
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			display: none;
+		}
+		&.show {
+			@include mmax(576) {
+				display: flex;
+			}
+		}
+	}  // Nav
 	&_menu {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
 		font-weight: 700;
+		@include mmax(576) {
+			width: 100%;
+			background: rgba(255, 255, 255, .8);
+			backdrop-filter: blur(12px);
+			border-radius: 12px;
+			padding: 20px;
+			flex-direction: column;
+		}
 		&__main {
 			color: $blue;
 		}
-	li:not(:nth-child(5)) {
-		margin-right: 30px;
+		li {
+			&:not(:nth-child(5)) {
+				margin-right: 30px;	
+				
+				@include mmax(768) {
+					margin-right: 10px;	
+				}
+				@include mmax(576) {
+					margin-right: 0;	
+				}
+			}
+			@include mmax(576) {
+				border: 1px solid transparent;
+				border-radius: 12px;
+				background-color: #F5F5FA;
+				padding: 8px;
+				&:not(:nth-child(5)) {
+					margin-bottom: 11px;
+				}
+			}
 		}
-	}
+	} 	// Menu
+		.nav_link {
+			@include mmax(576) {
+				width: 100%;
+				font-size: 24px;
+				color: $blue;
+			}
+			&:hover {
+				color: $white;
+				padding-bottom: 3px;
+				border-bottom: 2px solid $white;
+				transition: .3s linear;
+			}
+			&.active {
+				color: $white;
+				padding-bottom: 3px;
+				border-bottom: 2px solid $white;
+				transition: .3s linear;
+			}
+			&__main {
+				&:hover {
+					color: $red;
+					padding-bottom: 3px;
+					border-bottom: 2px solid $red;
+					transition: .3s linear;
+				}
+				&.active {
+					color: $red;
+					padding-bottom: 3px;
+					border-bottom: 2px solid $red;
+					transition: .3s linear;
+				}
+			}
+		}  // Nav_link
 	&_icon {
 		width: 24px;
 		height: 24px;
@@ -118,51 +203,27 @@
 				transition: $trans;
 			}
 		}
+		@include mmax(768) {
+			display: none;
+		}
 	}
 	.lang_link {
 		font-weight: 700;
-			&.active {
+		&.active {
 			min-width: 29px;
 			padding: 5px 6px;
 			border-radius: 8px;
 			background-color: $red;
 		}
-			&__main {
-				&:hover {
-					min-width: 29px;
-					padding: 5px 6px;
-					border-radius: 8px;
-					background-color: #EDEDF7;
-					transition: $trans;
-				}
+		&__main {
+			&:hover {
+				min-width: 29px;
+				padding: 5px 6px;
+				border-radius: 8px;
+				background-color: #EDEDF7;
+				transition: $trans;
 			}
-	}
-	.nav_link {
-		&:hover {
-			color: $white;
-			padding-bottom: 3px;
-			border-bottom: 2px solid $white;
-			transition: .3s linear;
 		}
-			&.active {
-				color: $white;
-				padding-bottom: 3px;
-				border-bottom: 2px solid $white;
-				transition: .3s linear;
-				}
-				&__main {
-					&:hover {
-						color: $red;
-						padding-bottom: 3px;
-						border-bottom: 2px solid $red;
-						transition: .3s linear;
-				}
-				&.active {
-					color: $red;
-					padding-bottom: 3px;
-					border-bottom: 2px solid $red;
-					transition: .3s linear;
-					}
-	}
-	}
+	}  // Lang_link
+	
 }

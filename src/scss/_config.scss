@@ -15,7 +15,7 @@ $trans: .3s ease-in-out;
 @import "/node_modules/owl-carousel/owl-carousel/owl.carousel.css";
 // @import "/node_modules/owl-carousel/owl-carousel/owl.theme.css";
 
-  body {
+body {
 	margin: 0;
 	width: 100%;
 	min-width: 320px;
@@ -23,9 +23,9 @@ $trans: .3s ease-in-out;
 	font-family: $font;
 	font-weight: 400;
 	font-style: normal;
-   font-size: $fontSize;
+	font-size: $fontSize;
 	line-height: 1.2;
-   color: $main;
+	color: $main;
 	// overflow-x: hidden;
 }
 *,
@@ -35,11 +35,11 @@ $trans: .3s ease-in-out;
 }
 ::placeholder {
 	color: #666;
- }
+}
 ::selection {
 	background-color: #666;
 	color: #fff;
- }
+}
 h1,
 h2,
 h3,
@@ -53,10 +53,10 @@ p {
 }
 b,
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 ul,ol{
-  margin: 0;
+	margin: 0;
 }
 li {
 	list-style-type: none;
@@ -72,7 +72,7 @@ img {
 	display: block;
 }
 .container {
-   width: 100%;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1140px;
@@ -87,16 +87,63 @@ img {
 	padding: 0 15px;
 	max-width: 1350px;
 	min-width: 320px;
- }
+}
+//  Header-mobile
+.header {
+	&.fixed {
+		height: auto;
+		position: fixed;
+		border: 1px solid rgba(104, 104, 135, .2);
+		border-radius: 0 0 10px 10px;
+		background: rgba(104, 104, 135, .8);
+		backdrop-filter: blur(3px);
+	}
+	.header_burger {
+		display: none;
+		cursor: pointer;
+		background: none;
+		padding: 9px 2px;
+		border: 0;  
+		@include mmax(576) {
+			display: block;
+		}
+		.burger__item {
+			position: relative;
+			display: block;
+			width: 30px;
+			height: 3px;
+			background-color: $main;
+			font-size: 0;
+			color: transparent;
+			
+			&::before,
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: $main;
+				position: absolute;
+				left: 0;
+				z-index: 1;
+			}
+			&::before {
+				top: -8px;
+			}
+			&::after {
+				bottom: -8px;
+			}
+		}	
+	}
+}
 //  Row-wrapper
- .wrapper {
-	 display: flex;
-	 flex-wrap: wrap;
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-		@include mmax(1199) {
+	@include mmax(1199) {
 		justify-content: center;
 	}
- 	 &_itm {
+	&_itm {
 		display: flex;
 		max-width: 30%;
 		flex-direction: column;
@@ -106,51 +153,51 @@ img {
 		@include mmax(768) {
 			max-width: 100%;
 		}
-	 }
-		&__colleft {
-			display: flex;
-			flex-basis: 53%;
-			max-width: 53%;
-			justify-content: center;
-			padding-right: 42px;
-		}
-		&__colright {
-			display: flex;
-			flex-basis: 30%;
-			max-width: 30%;
-			justify-content: center;
-			position: relative;
-			padding-left: 20px;
-			&::before {
-				content: '';
-				display: block;
-				border: 2px solid #E6E6F0;
-				transform: rotate(0deg);
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
+	}
+	&__colleft {
+		display: flex;
+		flex-basis: 53%;
+		max-width: 53%;
+		justify-content: center;
+		padding-right: 42px;
+	}
+	&__colright {
+		display: flex;
+		flex-basis: 30%;
+		max-width: 30%;
+		justify-content: center;
+		position: relative;
+		padding-left: 20px;
+		&::before {
+			content: '';
+			display: block;
+			border: 2px solid #E6E6F0;
+			transform: rotate(0deg);
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
 		}
 	}
-//  Colums_wrap
- .wrap {
-	 display: flex;
-	 flex-flow: row nowrap;
-	 justify-content: space-evenly;
-	 align-items: center;
-	 @include mmax(768) {
-		flex-direction: column;
 }
-	 &_col {
-		 display: flex;
-		 flex-direction: column; 
-		 @include mmax(768) {
+//  Colums_wrap
+.wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	@include mmax(768) {
+		flex-direction: column;
+	}
+	&_col {
+		display: flex;
+		flex-direction: column; 
+		@include mmax(768) {
 			flex: 0 0 100%;
 			max-width: 100%;
-	}
-			 &__small {
+		}
+		&__small {
 			flex: 0 0 35%;
 			max-width: 35%;
 			padding-right: 40px;
@@ -159,21 +206,21 @@ img {
 				flex: 0 0 40%;
 				max-width: 40%;
 			}
- 		}
-	&__big {
+		}
+		&__big {
 			flex: 0 0 50%;
 			max-width: 50%;
 			@include mmax(992) {
 				flex: 0 0 40%;
 				max-width: 40%;
+			}
 		}
-		}
- 	}
+	}
 }
- .pt_180px {
-	 padding-top: 180px;
- }
- .title_gradient {
+.pt_180px {
+	padding-top: 180px;
+}
+.title_gradient {
 	display: block;
 	font-size: 42px;
 	font-weight: 700;
@@ -185,8 +232,8 @@ img {
 		background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
 		background-clip: text;
 	}
- }
- .page_text {
+}
+.page_text {
 	font-size: 18px;
 	line-height: 22px;
 	color: $main;
@@ -208,7 +255,6 @@ img {
 	}
 	&__big-500 {
 		font-size: 18px;
-		width: 500px;
 		line-height: 19px;
 		color: $gray;
 	}
@@ -231,8 +277,8 @@ img {
 		line-height: 22px;
 		color: $gray;
 	}
- }
- .item_title {
+}
+.item_title {
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 29px;
@@ -240,8 +286,8 @@ img {
 	&__large{
 		margin-bottom: 15px;
 	}
- }
- .page_nav {
+}
+.page_nav {
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 17px;
@@ -250,7 +296,7 @@ img {
 	&__violet {
 		display: block;
 		color: $main;
-	   text-align: center;
+		text-align: center;
 		margin-bottom: 30px;
 	}
 }
@@ -275,7 +321,7 @@ img {
 		}
 	}
 }
- //  Sprite
+//  Sprite
 .main_icon {
 	display: block;
 	width: 38px;

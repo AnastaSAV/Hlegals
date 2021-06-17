@@ -1,11 +1,9 @@
 .section_gradient {
-	width: 100%;
 	height: 100vh;
 	margin: 0 auto;
 	background-image: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
 
 &__reverse {
-	width: 100%;
 	height: auto;
 	margin: 0 auto 60px;
 	padding-bottom: 80px;

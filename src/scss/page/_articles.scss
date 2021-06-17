@@ -1,8 +1,5 @@
 .articles {
-	width: 100%;
 	border-radius: 12px 12px 0 0;
-	// height: 900px;
-	// overflow: hidden;
 	padding-top: 40px;
 	background-color: #F5F5FA;
 	.title_gradient {
@@ -24,7 +21,7 @@
 			max-width: 100%;
 		}
 		img {
-			height: 233px;
+			min-height: 233px;
 			overflow: hidden;
 			@include mmax(842) {
 				height: auto;
@@ -82,3 +79,23 @@
 			z-index: 1;
 	}
 }
+	// PublicationsCard
+	.articles_card {
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		&_title {
+			font-size: 382px;
+			width: 500px;
+			line-height: 500;
+			color: $main;
+		}
+		&_list {
+			counter-reset: section;
+			li::before {
+				counter-increment: section;
+				content: counter(section);
+			}
+		}
+	
+	}
