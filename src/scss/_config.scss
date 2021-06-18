@@ -15,10 +15,9 @@ $trans: .3s ease-in-out;
 @import "/node_modules/owl-carousel/owl-carousel/owl.carousel.css";
 // @import "/node_modules/owl-carousel/owl-carousel/owl.theme.css";
 
-body {
+ body {
+   width: 100%;
 	margin: 0;
-	width: 100%;
-	min-width: 320px;
 	box-sizing: border-box;
 	font-family: $font;
 	font-weight: 400;
@@ -82,7 +81,6 @@ img {
 	}
 }
 .container-fluid{
-	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1350px;

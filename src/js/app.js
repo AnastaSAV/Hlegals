@@ -37,15 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
 				event.preventDefault();
 				nav.toggleClass("show");
 		  });
-		
-		
-		$(document).ready(function(){
-			$("#slider").owlCarousel({
+			$(".slider_wrapper").owlCarousel({
 				items: 1,
-				loop: true,
-				nav: true,
+				dots: false,
+				center: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: false,
+						dots: false,
+					},
+					820: {
+						items: 1,
+						nav: false,
+						dots: false,
+					},
+					1000: {
+						items: 1,
+						nav: false,
+						dots: false,
+					},
+				}
 			})
-		})
+
 		$(document).ready(function(){
 			$("#sliderAbout").owlCarousel({
 				items: 4,

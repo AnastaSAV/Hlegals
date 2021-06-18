@@ -1,19 +1,53 @@
 .slider {
 	margin-bottom: 41px;
-	@include mmax(1199) {
+	@include mmax(430) {
 		display: none;
 	}
 &_itm {
 	background-color: #F5F5FA;
 	border-radius: 12px;
 	display: flex;
+	@include mmax(826) {
+		flex-direction: column-reverse;
+		align-items: stretch;
+		img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			margin: 20px 0 20px 20px;
+		}
+	}
 }
 &_content {
 	display: flex;
 	flex-direction: column;
 	flex: 0 0 63%;
 	max-width: 63%;
-	padding: 40px 0 0 40px;
+	padding: 40px 20px 0 40px;
+	@include mmax(1270) {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	@include mmax(1199) {
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+	@include mmax(992) {
+		flex: 0 0 30%;
+		max-width: 30%;
+	}
+	@include mmax(820) {
+		flex: 0 0 60%;
+		max-width: 60%;
+	}
+	@include mmax(768) {
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+	@include mmax(592) {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
 }
 &_nav {
 	color: $blue;
@@ -30,11 +64,10 @@
 		z-index: 1;
 	}
 }
-}
 .owl-carousel {
 	max-width: 100%;
 	margin: auto;
-
+}
 .owl-item {
 	width: 964px;
 }
@@ -62,5 +95,23 @@
  .active {
 	background-color: $blue;
  }
+ .title_gradient {
+	@include mmax(1270) {
+	font-size: 32px;
+	}
+	@include mmax(992) {
+		font-size: 26px;
+		line-height: 1;
+	}
+	@include mmax(826) {
+		font-size: 32px;
+		line-height: 1.2;
+	}
+	@include mmax(592) {
+		font-size: 24px;
+		line-height: 1.2;
+	
+ }
+}
 }
 
