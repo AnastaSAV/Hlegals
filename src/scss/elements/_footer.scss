@@ -5,31 +5,61 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 32px 0 40px;
-		@include mmax(1300) {
+		@include mmax(992) {
 			flex-direction: column;
 			align-items: center;
+		}
+		@include mmax(480) {
+			p {
+			text-align: center;
+			}
+		}
+	}
+	&_wrapper {
+		display: flex;
+		flex: 0 0 40%;
+		max-width: 40%;
+		flex-direction: column;
+			@include mmax(1199) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+		@include mmax(992) {
+			width: 55%;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		@include mmax(768) {
+			width: 70%;
+			justify-content: center;
+		}
+		@include mmax(605) {
+			width: 100%;
 		}
 	}
 	&_contacts {
 		display: flex;
-		flex: 0 0 33%;
-		max-width: 33%;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: flex-end;
-		@include mmax(1300) {
-			flex: 0 0 50%;
-			max-width: 50%;
-			flex-direction: column;
-			align-items: center;
+		width: 100%;
+		justify-content: space-evenly;
+		align-items: center;
+		&:not(:nth-child(2)) {
+			margin-bottom: 15px;
 		}
 		@include mmax(992) {
-			flex: 0 0 100%;
-			max-width: 100%;
+			justify-content: space-between;
+		}
+		@include mmax(768) {
+			justify-content: space-evenly;
+		}
+		@include mmax(480) {
 			flex-direction: column;
 			align-items: center;
+			* {
+				margin-bottom: 10px;
+			}
 		}
 	}
+
 	.page_nav {
 		color: $blue;
 		&::before {
@@ -39,8 +69,11 @@
 			border-radius: 50%;
 			background-color: #B3B3BA;
 			position: absolute;
-			top: 40%;
+			top: 30%;
 			left: -15px;
+			@include mmax(768) {
+				display: none;
+			}
 }
 		&:hover {
 			color: $red;
@@ -58,6 +91,9 @@
 			position: absolute;
 			top: 40%;
 			left: -10px;
+			@include mmax(768) {
+				display: none;
+			}
 		}
 			&::after {
 				content: "";
@@ -68,6 +104,9 @@
 				position: absolute;
 				top: 40%;
 				right: -15px;
+				@include mmax(768) {
+					display: none;
+				}
 	}
 }
 }

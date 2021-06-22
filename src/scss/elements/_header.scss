@@ -3,82 +3,91 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 500;
-	
+	z-index: 100;
 	&_inner {
 		padding: 55px 0px 20px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&_wrapper {
-		min-width: 600px;
-		color: $white;
-		@include mmax(768) {
-			min-width: auto;
-		}
-	}
-	&_logo {
-		display: flex;
-		align-items: center;
-		&__inner {
-			display: inline-flex;
-			vertical-align: top;
-		}
-		&__nav {
-			font-size: 38px;
-			font-weight: 400;
-			color: $main;
-			margin-left: 20px;
-		}
-		&__main {
-			position: relative;
-			&::after {
-				content: '';
-				border: 3px solid $red;
-				width: 37%;
-				transform: rotate(110deg);
-				position: absolute;
-				top: 20px;
-				right: -40px;
-				z-index: 1;
-			}
-		}
 	}
 	&_info {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
-		margin-bottom: 16px;
+		color: $white;
+		margin-bottom: 10px;
 		&__main {
 			color: $gray;
 		}
-		@include mmax(768) {
-			justify-content: flex-end;
+		@include mmax(992) {
+			justify-content: flex-start;
 		}
-	} // _info
-	&_lang {
-		display: flex;
-		li:not(:last-child) {
-			padding-right: 13px;
-		}
-		@include mmax(768) {
-			margin-right: 30px;
+		@include mmax(635) {
+			justify-content: space-between;
+			margin-bottom: 20px;
 		}
 	}
+	&_lang {
+		display: flex;
+		@include mmax(635) {
+			padding: 0;
+		}
+		 li {
+			padding-right: 20px;
+				@include mmax(380) {
+					padding-right: 10px;
+			}
+			}
+		.lang_link {
+				font-weight: 700;
+		&.active {
+					min-width: 29px;
+					padding: 5px 6px;
+					border-radius: 8px;
+					background-color: $red;
+				}
+				&__main {
+					&:hover {
+						min-width: 29px;
+						padding: 5px 6px;
+						border-radius: 8px;
+						color: $white;
+						background-color: #EDEDF7;
+						transition: $trans;
+					}
+					&.active {
+						min-width: 29px;
+						padding: 5px 6px;
+						border-radius: 8px;
+						color: $white;
+						background-color: $red;
+				}
+			}
+		}
+	}//Lang
+	&_icon {
+		width: 24px;
+		height: 24px;
+		fill: $white;
+		margin: 0;	
+		&:hover {
+			fill: $blue;
+			transition: $trans;
+		}
+		&__main {
+			fill: $gray;	
+		}
+		@include mmax(635) {
+			display: none;
+		}
+	}//Icon
 	&_contacts {
 		display: flex;
 		font-size: 16px;
 		align-items: center;
-		@include mmax(576) {
-			display: none;
-		}
 		.address {
 			padding-right: 20px;
-			@include mmax(768) {
+			@include mmax(635) {
 				display: none;
 			}
-		}
+	  }
 		.tel {
 			font-weight: 700;
 			position: relative;
@@ -92,8 +101,11 @@
 				position: absolute;
 				bottom: 38%;
 				left: -11px;
-			}
-			&::after {
+				@include mmax(380) {
+					display: none;
+				}
+		}
+		&::after {
 				content: "";
 				width: 6px;
 				height: 6px;
@@ -102,10 +114,69 @@
 				position: absolute;
 				top: 30%;
 				right: -11px;
+				@include mmax(380) {
+					display: none;
+				}
 			}
 		}
 	}  // Contacts
+	&_wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		color: $white;
+		position: relative;
+		@include mmax(992) {
+			flex-direction: column;
+		}
+	}
+	&_logo {
+		display: block;
+		padding-top: 15px;
+		&__inner {
+			display: flex;
+			align-items: center;
+			@include mmax(992) {
+				margin-bottom: 15px;
+			}
+			@include mmax(576) {
+				margin-bottom: 0;
+			}
+		}
+		&__main {
+			position: relative;
+			&::after {
+				content: '';
+				border: 3px solid $red;
+				width: 37%;
+				transform: rotate(110deg);
+				position: absolute;
+				top: 20px;
+				right: -40px;
+				z-index: 1;
+			}
+			@include mmax(380) {
+				display: none;
+			}
+		}
+	&__nav {
+		font-size: 38px;
+		font-weight: 400;
+		color: $main;
+		margin-left: 20px;
+		&__main {
+			color: $white;
+		}
+		@include mmax(576) {
+			font-size: 19px;
+		}
+		@include mmax(380) {
+			display: none;
+		}
+	}
+} //Logo
 	&_nav {
+		display: block;
 		@include mmax(576) {
 			width: 100%;
 			text-align: center;
@@ -119,12 +190,13 @@
 				display: flex;
 			}
 		}
-	}  // Nav
+	}
 	&_menu {
 		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
+		align-self: center;
 		font-weight: 700;
+		margin: 0;
+		padding: 0;
 		@include mmax(576) {
 			width: 100%;
 			background: rgba(255, 255, 255, .8);
@@ -133,16 +205,9 @@
 			padding: 20px;
 			flex-direction: column;
 		}
-		&__main {
-			color: $blue;
-		}
 		li {
 			&:not(:nth-child(5)) {
 				margin-right: 30px;	
-				
-				@include mmax(768) {
-					margin-right: 10px;	
-				}
 				@include mmax(576) {
 					margin-right: 0;	
 				}
@@ -154,10 +219,9 @@
 				padding: 8px;
 				&:not(:nth-child(5)) {
 					margin-bottom: 11px;
-				}
 			}
 		}
-	} 	// Menu
+	}
 		.nav_link {
 			@include mmax(576) {
 				width: 100%;
@@ -169,14 +233,23 @@
 				padding-bottom: 3px;
 				border-bottom: 2px solid $white;
 				transition: .3s linear;
+				@include mmax(576) {
+					color: $red;
+					border-bottom: none;
+				}
 			}
 			&.active {
 				color: $white;
 				padding-bottom: 3px;
 				border-bottom: 2px solid $white;
 				transition: .3s linear;
+				@include mmax(576) {
+					color: $red;
+					border-bottom: none;
+				}
 			}
 			&__main {
+				color: $blue;
 				&:hover {
 					color: $red;
 					padding-bottom: 3px;
@@ -189,41 +262,76 @@
 					border-bottom: 2px solid $red;
 					transition: .3s linear;
 				}
-			}
-		}  // Nav_link
-	&_icon {
-		width: 24px;
-		height: 24px;
-		fill: $white;
-		margin: 0;
-		&__main {
-			fill: $gray;
-			&:hover {
-				fill: $blue;
-				transition: $trans;
+				@include mmax(576) {
+					width: 100%;
+					font-size: 24px;
+					color: $blue;
+					&:hover {
+						color: $red;
+						transition: $trans;
+						border: none;
+					}
+					&.active {
+						border: none;
+					}
+				}
 			}
 		}
-		@include mmax(768) {
-			display: none;
-		}
+	}// Menu
+	//  Header-mobile
+	&.fixed {
+		height: auto;
+		position: fixed;
+		border: 1px solid rgba(104, 104, 135, .2);
+		border-radius: 0 0 10px 10px;
+		background: rgba(104, 104, 135, .8);
+		backdrop-filter: blur(3px);
 	}
-	.lang_link {
-		font-weight: 700;
-		&.active {
-			min-width: 29px;
-			padding: 5px 6px;
-			border-radius: 8px;
+	&_burger {
+		display: none;
+		cursor: pointer;
+		background: none;
+		padding: 9px 2px;
+		border: 0;  
+		&__item {
+			position: relative;
+			display: block;
+			width: 30px;
+			height: 3px;
 			background-color: $red;
-		}
-		&__main {
-			&:hover {
-				min-width: 29px;
-				padding: 5px 6px;
-				border-radius: 8px;
-				background-color: #EDEDF7;
-				transition: $trans;
+			font-size: 0;
+			color: transparent;
+			&::before,
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: $red;
+				position: absolute;
+				right: 0;
+				z-index: 1;
+			}
+			&::before {
+				top: -8px;
+			}
+			&::after {
+				bottom: -8px;
 			}
 		}
-	}  // Lang_link
-	
+		@include mmax(576) {
+			display: block;
+			position: absolute;
+			top: 30%;
+			right: 0;
+		}	
+	}
 }
+
+
+
+			
+			
+			
+			
+			
+		

@@ -16,50 +16,57 @@
 			</g>
 		</symbol>
 	</svg>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container-fluid">
 		<div class="header_inner">
-			<div class="header_logo__inner">
-				<a href="index.html" class="header_logo__main">
-					<img src="img/page_logo.png" alt="logo"></a>
-					<a class="header_logo__nav" href="publications.html">публикації</a>
-					<img src="img/logo_small.png" alt="">
+			<div class="header_info header_info__main">
+				<ul class="header_lang">
+					 <li><a class="lang_link lang_link__main active" href="#">Ук</a></li>
+					 <li><a class="lang_link lang_link__main" href="#">Ru</a></li>
+					 <li><a class="lang_link lang_link__main" href="#">En</a></li>
+				</ul>
+				<div class="header_contacts">
+					<p class="address">Одеса, Адміральський пр., 3</p>
+					<a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
+					<a href="https://www.facebook.com/" class="header_link">
+					 <svg class="header_icon header_icon__main">
+						 <use xlink:href="#facebook"></use>
+					 </svg>
+					</a>
 				</div>
+			</div>
 				<div class="header_wrapper">
-					<div class="header_info header_info__main">
-						<ul class="header_lang">
-							 <li><a class="lang_link lang_link__main active" href="#">Ук</a></li>
-							 <li><a class="lang_link lang_link__main" href="#">Ru</a></li>
-							 <li><a class="lang_link lang_link__main" href="#">En</a></li>
-						</ul>
-				  <div class="header_contacts header_contacts__main">
-					  <p class="address">Одеса, Адміральський пр., 3</p>
-					  <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
-					  <a href="#" class="header_link">
-						<svg class="header_icon header_icon__main">
-							<use xlink:href="#facebook"></use>
-						</svg>
-					  </a>
-				  </div>
-				</div>
-				  <nav class="header_nav">
-					  <ul class="header_menu header_menu__main">
-						  <li><a href="about.html" class="nav_link nav_link__main" target="blank">о нас</a></li>
-						  <li><a href="services.html" class="nav_link nav_link__main" target="blank">послуги</a></li>
-						  <li><a href="team.html" class="nav_link nav_link__main" target="blank">команда</a></li>
-						  <li><a href="publications.html" class="nav_link nav_link__main active" target="blank">публікації</a></li>
-						  <li><a href="contacts.html" class="nav_link nav_link__main" target="blank">контакти</a></li>
+					<div class="header_logo__inner">
+						<a href="index.html" class="header_logo__main">
+							<img src="img/page_logo.png" alt="logo"></a>
+							<a class="header_logo__nav" href="publicationsCard.html" target="_blank">публікації</a>
+							<img src="img/logo_small.png" alt="">
+						</div>
+				  <nav class="header_nav" id="nav">
+					  <ul class="header_menu">
+						  <li><a href="about.html" class="nav_link nav_link__main" target="_blank">о нас</a></li>
+						  <li><a href="services.html" class="nav_link nav_link__main" target="_blank">послуги</a></li>
+						  <li><a href="team.html" class="nav_link nav_link__main" target="_blank">команда</a></li>
+						  <li><a href="publications.html" class="nav_link nav_link__main active" target="_blank">публікації</a></li>
+						  <li><a href="contacts.html" class="nav_link nav_link__main" target="_blank">контакти</a></li>
 					  </ul>
 				  </nav>
+				  <button class="header_burger" type="button" id="navToggle">
+					<span class="header_burger__item">Menu</span>
+			  </button>
 				</div>
 		</div>
-	</div>
+</div>
 	</header>
 	<div class="section">
-<div class="articles">
+<div class="articles articles_page">
 	<div class="container-fluid">
-		<input type="range">
-		<label for="range"></label>
+		<div class="articles_navbar">
+		<ul class="articles_tabs">
+			  <a class="btn btn__nav active">новини</a>
+			  <a class="btn btn__nav">компанія</a>
+		 </ul>
+		</div>
 		<div class="wrapper">
 			<a href="publicationsCard.html" class="wrapper_itm" target="_blank">
 				<div class="articles_content">
@@ -211,11 +218,11 @@
 				</blockquote>
 				</div>
 			</a>
-			<a href="#" class="btn btn__blue">Ще публікації</a>
-		</div>
-	</div>
-</div>
-</div>
+	</div> <!--/wrapper  -->
+	<a href="publicationsCard.html" class="btn btn__blue">Ще публікації</a>
+	</div> <!--/container -->
+</div> <!--/articles -->
+</div><!--/section  -->
 @@include('_footer.html')
 <script src="js/app.min.js"></script>
 <script src="js/libs.min.js"></script>

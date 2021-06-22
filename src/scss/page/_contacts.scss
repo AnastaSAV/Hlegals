@@ -1,11 +1,29 @@
 .contacts {
 	.wrap {
 		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 80px;
+		@include mmax(768) {
+			align-items: stretch;
+		}
+		&_col__small {
+			@include mmax(768) {
+				align-items: center;
+			}
+		}
+		&_col__big {
+			@include mmax(768) {
+		
+			}
+		}
 	}
 	.title_gradient {
 		font-size: 32px;
 		margin-bottom: 20px;
+		@include mmax(440) {
+			font-size: 23px;
+			line-height: 1;
+		}
 	}
 	&_text {
 		font-size: 21px;
@@ -44,5 +62,9 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: $blue;
+		@include mmax(992) {
+			margin-top: 20px;
+		}
+	
 }
 }

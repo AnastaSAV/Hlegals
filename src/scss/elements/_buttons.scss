@@ -37,7 +37,7 @@
 	border-radius: 50%;
 	margin: auto;
 	position: absolute;
-	bottom: 2%;
+	bottom: 7%;
 	left: 0;
 	right: 0;
 	z-index: 5;
@@ -78,4 +78,25 @@
 		
 	}
 }
+	&__nav {
+			width: 100%;
+			max-width: 127px;
+			padding: 8px 0;
+			font-size: 18px;
+			font-weight: 500;
+			background-color: transparent;
+		&.active {
+			width: 100%;
+			max-width: 127px;
+			padding: 8px 0;
+			font-size: 18px;
+			font-weight: 500;
+			background-color: $white;
+			color: $main;
+			border: 2px solid #E6E6F0;
+			border-radius: 10px;
+			margin: auto;
+		}
+	
+	}
 }

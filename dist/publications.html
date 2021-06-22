@@ -16,50 +16,57 @@
 			</g>
 		</symbol>
 	</svg>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container-fluid">
 		<div class="header_inner">
-			<div class="header_logo__inner">
-				<a href="index.html" class="header_logo__main">
-					<img src="img/page_logo.png" alt="logo"></a>
-					<a class="header_logo__nav" href="publications.html">публикації</a>
-					<img src="img/logo_small.png" alt="">
+			<div class="header_info header_info__main">
+				<ul class="header_lang">
+					 <li><a class="lang_link lang_link__main active" href="#">Ук</a></li>
+					 <li><a class="lang_link lang_link__main" href="#">Ru</a></li>
+					 <li><a class="lang_link lang_link__main" href="#">En</a></li>
+				</ul>
+				<div class="header_contacts">
+					<p class="address">Одеса, Адміральський пр., 3</p>
+					<a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
+					<a href="https://www.facebook.com/" class="header_link">
+					 <svg class="header_icon header_icon__main">
+						 <use xlink:href="#facebook"></use>
+					 </svg>
+					</a>
 				</div>
+			</div>
 				<div class="header_wrapper">
-					<div class="header_info header_info__main">
-						<ul class="header_lang">
-							 <li><a class="lang_link lang_link__main active" href="#">Ук</a></li>
-							 <li><a class="lang_link lang_link__main" href="#">Ru</a></li>
-							 <li><a class="lang_link lang_link__main" href="#">En</a></li>
-						</ul>
-				  <div class="header_contacts header_contacts__main">
-					  <p class="address">Одеса, Адміральський пр., 3</p>
-					  <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
-					  <a href="#" class="header_link">
-						<svg class="header_icon header_icon__main">
-							<use xlink:href="#facebook"></use>
-						</svg>
-					  </a>
-				  </div>
-				</div>
-				  <nav class="header_nav">
-					  <ul class="header_menu header_menu__main">
-						  <li><a href="about.html" class="nav_link nav_link__main" target="blank">о нас</a></li>
-						  <li><a href="services.html" class="nav_link nav_link__main" target="blank">послуги</a></li>
-						  <li><a href="team.html" class="nav_link nav_link__main" target="blank">команда</a></li>
-						  <li><a href="publications.html" class="nav_link nav_link__main active" target="blank">публікації</a></li>
-						  <li><a href="contacts.html" class="nav_link nav_link__main" target="blank">контакти</a></li>
+					<div class="header_logo__inner">
+						<a href="index.html" class="header_logo__main">
+							<img src="img/page_logo.png" alt="logo"></a>
+							<a class="header_logo__nav" href="publicationsCard.html" target="_blank">публікації</a>
+							<img src="img/logo_small.png" alt="">
+						</div>
+				  <nav class="header_nav" id="nav">
+					  <ul class="header_menu">
+						  <li><a href="about.html" class="nav_link nav_link__main" target="_blank">о нас</a></li>
+						  <li><a href="services.html" class="nav_link nav_link__main" target="_blank">послуги</a></li>
+						  <li><a href="team.html" class="nav_link nav_link__main" target="_blank">команда</a></li>
+						  <li><a href="publications.html" class="nav_link nav_link__main active" target="_blank">публікації</a></li>
+						  <li><a href="contacts.html" class="nav_link nav_link__main" target="_blank">контакти</a></li>
 					  </ul>
 				  </nav>
+				  <button class="header_burger" type="button" id="navToggle">
+					<span class="header_burger__item">Menu</span>
+			  </button>
 				</div>
 		</div>
-	</div>
+</div>
 	</header>
 	<div class="section">
-<div class="articles">
+<div class="articles articles_page">
 	<div class="container-fluid">
-		<input type="range">
-		<label for="range"></label>
+		<div class="articles_navbar">
+		<ul class="articles_tabs">
+			  <a class="btn btn__nav active">новини</a>
+			  <a class="btn btn__nav">компанія</a>
+		 </ul>
+		</div>
 		<div class="wrapper">
 			<a href="publicationsCard.html" class="wrapper_itm" target="_blank">
 				<div class="articles_content">
@@ -211,17 +218,20 @@
 				</blockquote>
 				</div>
 			</a>
-			<a href="#" class="btn btn__blue">Ще публікації</a>
-		</div>
-	</div>
-</div>
-</div>
+	</div> <!--/wrapper  -->
+	<a href="publicationsCard.html" class="btn btn__blue">Ще публікації</a>
+	</div> <!--/container -->
+</div> <!--/articles -->
+</div><!--/section  -->
 <footer class="footer">
 	<div class="container-fluid">
 		<div class="footer_inner">
+			<div class="footer_wrapper">
 				<div class="footer_contacts">
 					<p>Одеса, Адміральський пр., 3</p>
 					<a href="contacts.html" class="page_nav">Подивитися на мапі</a>
+					</div>
+					<div class="footer_contacts">
 					<a href="https://www.facebook.com/" class="social_link" target="_blank">
 						<svg class="main_icon">
 							<use xlink:href="#facebook"></use>
@@ -230,9 +240,35 @@
 					  <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</ф>
 					  <a href="mailto:contact@hlegals.net" class="contact_link contact_link__bold" target="blank">contact@hlegals.net</a>
 					</div>
+				</div>
 					<p class="page_text__small-500"><sup>©</sup> 2021 ТОВ Юридична компанія «HLEGALS»</p>
-			</div>
+		</div>
 </div>
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+	  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" aria-describedby="modal-1-content">
+		 <div role="document">
+			<header class="modal__header">
+			  <h3 class="modal__title title_gradient" id="modal-1-title">Ми хотіли б Вам допомогти</h3>
+			  <button class="modal__close" id="close" aria-label="Close modal" aria-controls="modal__container1" data-micromodal-close></button>
+			</header>
+			<main class="modal__content" id="modal-1-content">
+			  <form action="#" class="form">
+				<input type="text" id="name" placeholder="Iм’я" required>
+				<textarea name="formArea" id="textArea" cols="10" rows="9" placeholder="Повідомлення"></textarea>
+				<label for="telNumb">Як вам відповісти?</label>
+				<input type="tel" id="telNumb" placeholder="Номер телефона" minlength="10" required>
+				<input type="email" id="eMail" placeholder="Чи email" required>
+			</form>
+			</main>
+			<footer class="modal__footer">
+				<button class="modal__btn modal__btn-primary">Надіслати запит</button>
+			  <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Закрити</button>
+			</footer>
+		 </div>
+	  </div>
+	</div>
+ </div>
 </footer>
 <svg style="display: none;">
 	<symbol id="facebook" viewBox="0 0 32 32">

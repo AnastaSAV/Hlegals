@@ -1,69 +1,176 @@
 .about {
+	.title_gradient {
+		@include mmax(992) {
+			font-size: 32px;
+		}
+	}
 	.wrap {
 		margin-bottom: 100px;
-			&_col__small {
+		@include mmax(992) {
+			margin-bottom: 40px;
+			align-items: flex-start;
+		}
+			&_col {
+			&__small {
 				padding: 0 0 0 20px;
-				&::after {
-					content: '';
-					display: block;
-					border: 2px solid #E5E5E5;
-					transform: rotate(0deg);
-					height: 100%;
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: 1;
+			&::after {
+				content: '';
+				display: block;
+				border: 2px solid #E5E5E5;
+				transform: rotate(0deg);
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				@include mmax(768) {
+					display: none;
+				}
 			}
-		}		
-	}
-
+		}
+		&__big {
+			position: relative;
+				@include mmax(768) {
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+			}
+			&::after {
+				content: '';
+				border: 2px solid #E5E5E5;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: none;
+				@include mmax(768) {
+					display: block;
+				}
+			}
+		}
+	}		
+	} //wrap
 	&_itm {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		flex: 0 0 80%;
+		max-width: 80%;
 		&:not(:last-child) {
 			margin-bottom: 40px;
 		}
+		@include mmax(768) {
+			max-width: 65%;
+		}
+		@include mmax(480) {
+			max-width: 100%;
+		}
 	}
-	&_title {
-		padding-left: 50px;
+	&_icon {
+		width: 50px;
+		height: 50px;
+	}
+	&_count {
+		padding-left: 10px;
 	}
 	&_banner {
-		display: block;
-		width: 100%;
 		background-image: url('../img/about_img.png');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		margin-bottom: 80px;
 	}
-	&_link {
-			display: block;
-			width: 100%;
-			font-size: 96px;
-			font-weight: 700;
-			line-height: 113px;
-			text-align: center;
-			letter-spacing: 63px;
-			text-transform: uppercase;
-			color: rgba(255, 255, 255, .8);
-			text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
-			padding: 163px 0;
-			&:hover {
-				color: $white;
-				opacity: 1;
-	    		transition: $trans;
-			}
-	}
-	&_slider {
-		display: block;
-		padding: 76px 80px 30px;
-		background-color: #F5F5FA;
+	&_title {
+		font-size: 96px;
+		font-weight: 700;
+		line-height: 113px;
+		text-align: center;
+		letter-spacing: 63px;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, .8);
+		text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+		padding: 163px 0;
 		@include mmax(992) {
-			display: none;
+			font-size: 72px;
+			letter-spacing: 50px;
+			line-height: 1;
 		}
-		.owl-wrapper-outer {
-			margin-bottom: 30px;
+		@include mmax(768) {
+			font-size: 65px;
+			letter-spacing: 30px;
+			line-height: 1;
 		}
-	.owl-item {
-		width: 515px;
+		@include mmax(576) {
+			font-size: 40px;
+			letter-spacing: 30px;
+			line-height: 1;
+		}
+		@include mmax(480) {
+			font-size: 30px;
+			letter-spacing: 20px;
+			line-height: 1;
+		}
+		@include mmax(320) {
+			font-size: 30px;
+			letter-spacing: 12px;
+			line-height: 1;
+		}
 	}
+	//Slick_slider
+.slider {
+	display: block;
+	overflow: hidden;
+	padding: 28px 30px;
+	background-color: #F5F5FA;
+}
+.slick-initialized {
+	height: auto;
+}
+
+.about_slick__item {
+	margin-right: 40px;
+	overflow: hidden;
+}
+.slick-dots {
+	display: block;
+	padding: 0 0 10px;
+	list-style: none;
+	width: 100%;
+	position: absolute;
+	bottom: -60px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	z-index: 2;
+}
+
+.slick-dots button {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: rgba(36, 163, 255, .2);
+	color: transparent;
+	cursor: pointer;
+	@include mmax(480) {
+		width: 10px;
+		height: 10px;
+	}
+	&:hover {
+		background-color: rgba(36, 163, 255, .6); 
+		transition: $trans;
+	}
+	
+}
+.slick-active button {
+	background-color: rgba(36, 163, 255, .6); 
+}
+
+.slick-dots li {
+	margin-right: 14px;
+	@include mmax(480) {
+		margin-right: 0px;
 	}
 }
+.slick-dots li button::before{
+	content: none;
+}
+}	

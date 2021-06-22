@@ -3,7 +3,6 @@ let project_folder = "dist";
 let source_folder = "src";
 let fs = require('fs');
 
-
 let path = {
     build: {
         html: project_folder + "/",
@@ -30,23 +29,26 @@ let path = {
 				}
 
 let { src, dest, task } = require('gulp');
-gulp = require('gulp');
-browsersync = require("browser-sync").create();
-fileinclude = require("gulp-file-include");
-del = require("del");
-scss = require("gulp-sass");
-autoprefixer = require("gulp-autoprefixer");
-group_media = require("gulp-group-css-media-queries");
-clean_css = require("gulp-clean-css");
-rename = require("gulp-rename");
-uglify = require("gulp-uglify-es").default;
-imagemin = require("gulp-imagemin");
-svgSprite = require("gulp-svg-sprite");
-ttf2woff = require("gulp-ttf2woff");
-ttf2woff2 = require("gulp-ttf2woff2");
-fonter = require("gulp-fonter");
-concat = require("gulp-concat");
-uglifyjs = require("gulp-uglifyjs");
+const gulp = require('gulp');
+const browsersync = require("browser-sync").create();
+const fileinclude = require("gulp-file-include");
+const del = require("del");
+const scss = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const group_media = require("gulp-group-css-media-queries");
+const clean_css = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const uglify = require("gulp-uglify-es").default;
+const imagemin = require("gulp-imagemin");
+const svgSprite = require("gulp-svg-sprite");
+const ttf2woff = require("gulp-ttf2woff");
+const ttf2woff2 = require("gulp-ttf2woff2");
+const fonter = require("gulp-fonter");
+const concat = require("gulp-concat");
+const {JSDOM} = require("jsdom");
+const {window} = new JSDOM("");
+const $ = require("jquery")(window);
+const uglifyjs = require("gulp-uglifyjs");
 
 //BrowserSync
 function browserSync(params) {
@@ -182,7 +184,8 @@ c_fontname = fontname;
 				'node_modules/jquery/dist/jquery.min.js', 
 				'node_modules/inputmask/dist/jquery.inputmask.min.js',
 				'node_modules/micromodal/dist/micromodal.min.js',
-				'node_modules/owl-carousel/owl-carousel/owl.carousel.min.js',
+				// 'node_modules/owl-carousel/owl-carousel/owl.carousel.min.js',
+				'node_modules/slick-carousel/slick/slick.min.js',
 				 ])
 				 .pipe(concat('libs.min.js')) 
 				 .pipe(uglifyjs()) // Сжатие JS файла

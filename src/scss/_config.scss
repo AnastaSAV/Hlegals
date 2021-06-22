@@ -12,11 +12,12 @@ $gradient-title-reverse: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%
 $trans: .3s ease-in-out;
 
 
-@import "/node_modules/owl-carousel/owl-carousel/owl.carousel.css";
+// @import "/node_modules/owl-carousel/owl-carousel/owl.carousel.css";
 // @import "/node_modules/owl-carousel/owl-carousel/owl.theme.css";
+@import "/node_modules/slick-carousel/slick/slick.css";
+@import "/node_modules/slick-carousel/slick/slick-theme.css";
 
  body {
-   width: 100%;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: $font;
@@ -84,54 +85,7 @@ img {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1350px;
-	min-width: 320px;
-}
-//  Header-mobile
-.header {
-	&.fixed {
-		height: auto;
-		position: fixed;
-		border: 1px solid rgba(104, 104, 135, .2);
-		border-radius: 0 0 10px 10px;
-		background: rgba(104, 104, 135, .8);
-		backdrop-filter: blur(3px);
-	}
-	.header_burger {
-		display: none;
-		cursor: pointer;
-		background: none;
-		padding: 9px 2px;
-		border: 0;  
-		@include mmax(576) {
-			display: block;
-		}
-		.burger__item {
-			position: relative;
-			display: block;
-			width: 30px;
-			height: 3px;
-			background-color: $main;
-			font-size: 0;
-			color: transparent;
-			
-			&::before,
-			&::after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background-color: $main;
-				position: absolute;
-				left: 0;
-				z-index: 1;
-			}
-			&::before {
-				top: -8px;
-			}
-			&::after {
-				bottom: -8px;
-			}
-		}	
-	}
+	// min-width: 320px;
 }
 //  Row-wrapper
 .wrapper {
@@ -185,32 +139,39 @@ img {
 	flex-flow: row nowrap;
 	justify-content: space-evenly;
 	align-items: center;
-	@include mmax(768) {
-		flex-direction: column;
-	}
+		@include mmax(768) {
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: flex-start;
+		}
 	&_col {
 		display: flex;
 		flex-direction: column; 
-		@include mmax(768) {
-			flex: 0 0 100%;
-			max-width: 100%;
-		}
-		&__small {
+			&__small {
 			flex: 0 0 35%;
 			max-width: 35%;
-			padding-right: 40px;
 			position: relative;
 			@include mmax(992) {
 				flex: 0 0 40%;
 				max-width: 40%;
-			}
+				padding: 0;
 		}
+			@include mmax(768) {
+				flex: 0 0 100%;
+				max-width: 100%;
+				padding-right: 0;
+		}
+	}
 		&__big {
 			flex: 0 0 50%;
 			max-width: 50%;
-			@include mmax(992) {
-				flex: 0 0 40%;
-				max-width: 40%;
+			@include mmax(768) {
+				flex: 0 0 100%;
+				max-width: 100%;
+		}
+			@include mmax(576) {
+				flex: 0 0 100%;
+				max-width: 100%;
 			}
 		}
 	}
@@ -226,6 +187,13 @@ img {
 	background: $gradient-title;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
+			@include mmax(480) {
+				font-size: 32px;
+				line-height: 1;
+			}
+			@include mmax(440) {
+				font-size: 23px;
+			}
 	&__reverse {
 		background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
 		background-clip: text;
@@ -250,6 +218,9 @@ img {
 		font-size: 21px;
 		line-height: 30px;
 		color: $black;
+		@include mmax (992) {
+			font-size: 18px;
+		}
 	}
 	&__big-500 {
 		font-size: 18px;
@@ -258,7 +229,6 @@ img {
 	}
 	&__big-400 {
 		font-size: 18px;
-		width: 400px;
 		line-height: 19px;
 		color: $gray;
 	}
@@ -325,7 +295,6 @@ img {
 	width: 38px;
 	height: 38px;
 	fill: $blue;
-	margin-top: 18px;
 	&:hover {
 		fill: $red;
 		transition: $trans;
@@ -341,6 +310,9 @@ img {
 	border-radius: 12px;
 	padding: 20px;
 	position: relative;
+	@include mmax(1199) {
+		max-width: 100%;
+	}
 	#name, #telNumb, #eMail {
 		font-size: 18px;
 		line-height: 26px;
@@ -359,11 +331,12 @@ img {
 		resize: vertical;
 		font-size: 18px;
 		line-height: 26px;
-		color: #000;
+		color: $gray;
 		background-color: $white;
 		border: none;
 		outline: none;
 		border-radius: 8px;
+		padding: 10px;
 		margin-bottom: 20px;
 	}
 	label[for=telNumb] {

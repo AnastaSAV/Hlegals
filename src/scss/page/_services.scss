@@ -4,7 +4,11 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		padding-top: 180px;
 		margin-bottom: 80px;
+		@include mmax(992) {
+			padding-top: 220px;
+		}
 	}
 	&_nav {
 		color: rgba(255, 255, 255, .5);
@@ -23,10 +27,12 @@
 	}
 		&_header {
 			margin-bottom: 68px;
+			@include mmax(768) {
+				margin-bottom: 40px;
+			}
 	}
 	&_head {
-		width: 100%;
-		max-width: 864px;
+		max-width: 861px;
 		margin: 0 auto;
 		padding-bottom: 80px;
 		text-align: center;
@@ -37,6 +43,9 @@
 			left: 0;
 			right: 0;
 			z-index: 1;
+		}
+		.title_gradient {
+			margin-bottom: 20px;
 		}
 	}
 	&_link {
@@ -75,7 +84,7 @@
 		font-weight: 400;
 		line-height: 26px;
 		color: $white;
-		@include mmax(768) {
+		@include mmax(992) {
 		columns: 1;
 		}
 			li {
@@ -96,5 +105,3 @@
 	}
 }
 }
-
-

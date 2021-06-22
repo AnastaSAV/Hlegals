@@ -29,9 +29,11 @@
     "jquery": "^3.6.0",
     "micromodal": "^0.4.6",
     "owl-carousel": "^1.0.0",
-    "rename": "^1.0.4"
+    "rename": "^1.0.4",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
-    "gulp-file-include": "^2.3.0"
+    "gulp-file-include": "^2.3.0",
+    "jsdom": "^16.6.0"
   }
 }

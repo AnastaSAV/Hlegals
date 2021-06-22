@@ -16,47 +16,50 @@
 			</g>
 		</symbol>
 	</svg>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container-fluid">
 		<div class="header_inner">
-			<div class="header_logo__inner">
-				<a href="index.html" class="header_logo__main">
-					<img src="img/logo_fff.png" alt="logo"></a>
-					<a class="header_logo__nav" href="servicesCard.html">послуги</a>
-					<img src="img/logo_small.png" alt="">
+			<div class="header_info">
+				<ul class="header_lang">
+					 <li><a class="lang_link active" href="#">Ук</a></li>
+					 <li><a class="lang_link" href="#">Ru</a></li>
+					 <li><a class="lang_link" href="#">En</a></li>
+				</ul>
+				<div class="header_contacts">
+					<p class="address">Одеса, Адміральський пр., 3</p>
+					<a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
+					<a href="https://www.facebook.com/" class="header_link">
+					 <svg class="header_icon">
+						 <use xlink:href="#facebook"></use>
+					 </svg>
+					</a>
 				</div>
+			</div>
 				<div class="header_wrapper">
-					<div class="header_info">
-						<ul class="header_lang">
-							 <li><a class="lang_link active" href="#">Ук</a></li>
-							 <li><a class="lang_link" href="#">Ru</a></li>
-							 <li><a class="lang_link" href="#">En</a></li>
-						</ul>
-				  <div class="header_contacts">
-					  <p class="address">Одеса, Адміральський пр., 3</p>
-					  <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
-					  <a href="#" class="header_link">
-						<svg class="header_icon">
-							<use xlink:href="#facebook"></use>
-						</svg>
-					  </a>
-				  </div>
-				</div>
-				  <nav class="header_nav">
+					<div class="header_logo__inner">
+					<a href="index.html" class="header_logo__main">
+						<img src="img/Logo Min.png" alt="logo"></a>
+						<a class="header_logo__nav header_logo__nav__main" href="services.html" target="_blank">послуги</a>
+						<img src="img/logo_small.png" alt="">
+						</div>
+				  <nav class="header_nav" id="nav">
 					  <ul class="header_menu">
 						  <li><a href="about.html" class="nav_link" target="_blank">о нас</a></li>
 						  <li><a href="services.html" class="nav_link active" target="_blank">послуги</a></li>
 						  <li><a href="team.html" class="nav_link" target="_blank">команда</a></li>
 						  <li><a href="publications.html" class="nav_link" target="_blank">публікації</a></li>
-						  <li><a href="contacts.html" class="nav_link" target="blank">контакти</a></li>
+						  <li><a href="contacts.html" class="nav_link" target="_blank">контакти</a></li>
 					  </ul>
 				  </nav>
+				  <button class="header_burger" type="button" id="navToggle">
+					<span class="header_burger__item">Menu</span>
+			  </button>
 				</div>
 		</div>
-	</div>
+</div>
 	</header>
 	<section class="section_gradient__soft">
-	<div class="services_banner pt_180px">
+	<div class="services_banner">
 		<div class="container-fluid">
 <div class="services_head">
 	<a href="servicesCard.html" class="services_link">
@@ -66,7 +69,7 @@
 	<p class="page_text page_text__whiteS">Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери — юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб наймати інхауз-юриста.</p>
 		<br>
 		<p class="page_text page_text__whiteS">До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій.</p>
-		<a href="#" class="btn btn__blue">Безкоштовна консультація</a>
+		<a class="btn btn__blue btn-trigger" data-micromodal-trigger="modal-1">Безкоштовна консультація</a>
 </div>
 </div>
 </div>
@@ -130,21 +133,7 @@
 							Експерти проводять конференції, круглі столи та іншого штибу заходи на тему «лібералізація валютного законодавства». Юристи-експерти-новелісти стирають пальці об…
 						</blockquote>
 						</div>
-					</a> 
-		
-					<a class="wrapper_itm">
-						<img src="img/art_2.png" alt="">
-						<div class="articles_content">
-					<div class="articles_header">
-						<p class="articles_title">Equity associate</p>
-						<span class="articles_date">22 квітня</span>
-					</div>
-						<blockquote class="articles_text">
-							На проектах я джун. При цьому я співвласник юридичної фірми. Як це відбулося. Перед вступом батьки мені казали, що якщо буду…
-						</blockquote>
-					</div>
-					</a>
-		
+					</a> 	
 					<a class="wrapper_itm">
 						<img src="img/art_3.png" alt="">
 						<div class="articles_content">
@@ -157,33 +146,6 @@
 						</blockquote>
 						</div>
 					</a>
-		
-					<a class="wrapper_itm">
-						<img src="img/art_4.png" alt="">
-						<div class="articles_content">
-						<div class="articles_header">
-							<p class="articles_title">Заповіт міленіала</p>
-							<span class="articles_date">19 серпня</span>
-						</div>
-						<blockquote class="articles_text">
-							Що і як передаватимуть у спадщину сучасні влогери, опініон лідери і криптомільйонери Типовий спадок українського покоління Х виглядає так: квартира у…
-						</blockquote>
-						</div>
-					</a>
-		
-					<a class="wrapper_itm">
-						<img src="img/art_5.png" alt="">
-						<div class="articles_content">
-						<div class="articles_header">
-							<p class="articles_title">Закон про мови: як зробити свій сайт відповідним</p>
-							<span class="articles_date">19 серпня</span>
-						</div>
-						<blockquote class="articles_text">
-						Наталія Кирик, керівник контент студії Wordfactory.ua По-перше, це красиво! Це аргумент номер один на користь україномовного сайту. По-друге, це ефективно. У…
-						</blockquote>
-						</div>
-					</a>
-				
 					<a class="wrapper_itm">
 						<img src="img/art_6.png" alt="">
 						<div class="articles_content">
@@ -200,8 +162,7 @@
 				</div>
 			</div>
 		</div>
-
-@@include('_footer.html')
+	@@include('_footer.html')
 <script src="js/app.min.js"></script>
 <script src="js/libs.min.js"></script>
 </body>

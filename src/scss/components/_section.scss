@@ -39,6 +39,9 @@
 		margin: auto;
 		z-index: 1;
 	}
+	@include mmax(992) {
+		padding-top: 40px;
+	}
 }
 &__soft {
 	height: auto;
@@ -83,6 +86,9 @@
 	padding-top: 180px;
 	position: relative;
 	z-index: 5;
+	@include mmax(992) {
+		padding-top: 240px;
+	}
 	&_title {
 		display: block;
 		text-align: center;
