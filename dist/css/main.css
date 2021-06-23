@@ -1767,9 +1767,9 @@ img {
 }
 
 .services_banner {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 100, 0.1)), color-stop(100%, #323264), color-stop(87.46%, #643E72)), url("../../img/s_cardBg.png");
-  background: -o-linear-gradient(top, rgba(50, 50, 100, 0.1) 0%, #323264 100%, #643E72 87.46%), url("../../img/s_cardBg.png");
-  background: linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%, #643E72 87.46%), url("../../img/s_cardBg.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 100, 0.1)), color-stop(100%, #323264), color-stop(87.46%, #643E72)), url("../img/s_cardBg.png");
+  background: -o-linear-gradient(top, rgba(50, 50, 100, 0.1) 0%, #323264 100%, #643E72 87.46%), url("../img/s_cardBg.png");
+  background: linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%, #643E72 87.46%), url("../img/s_cardBg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
