@@ -191,12 +191,13 @@ img {
 				font-size: 32px;
 				line-height: 1;
 			}
-			@include mmax(440) {
-				font-size: 23px;
-			}
 	&__reverse {
 		background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
 		background-clip: text;
+		@include mmax(480) {
+			font-size: 32px;
+			line-height: 1;
+		}
 	}
 }
 .page_text {
@@ -353,5 +354,8 @@ img {
 .map {
 	width: 100%;
 }
-
+.social_icon {
+	width: 24px;
+	height: 24px;
+}
 

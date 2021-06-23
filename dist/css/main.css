@@ -563,6 +563,11 @@ img {
   width: 100%;
 }
 
+.social_icon {
+  width: 24px;
+  height: 24px;
+}
+
 .header {
   width: 100%;
   position: absolute;
@@ -958,6 +963,13 @@ img {
   bottom: 10px;
   right: 11px;
   z-index: 1;
+}
+
+.btn_team:hover {
+  background-color: rgba(36, 163, 255, 0.2);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .btn__nav {
@@ -2073,7 +2085,11 @@ img {
 }
 
 .articles_date {
-  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #B3B3BA;
+  text-transform: uppercase;
   padding-bottom: 10px;
 }
 
@@ -2144,23 +2160,111 @@ img {
 
 .articles_card {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 41px;
 }
 
 .articles_card_title {
-  font-size: 382px;
-  width: 500px;
-  line-height: 500;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #323264;
+}
+
+.articles_card_subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
   color: #323264;
 }
 
 .articles_card_list {
-  counter-reset: section;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  counter-reset: item;
 }
 
 .articles_card_list li::before {
-  counter-increment: section;
-  content: counter(section);
+  content: counter(item) ".";
+  counter-increment: item;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #F0145A;
+  padding-right: 10px;
+}
+
+.articles_card_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-top: 4px solid #E6E6F0;
+  padding-top: 20px;
+}
+
+.articles_card .articles_header {
+  margin-bottom: 40px;
+}
+
+.articles_card .articles_text {
+  -webkit-margin-start: 20px;
+          margin-inline-start: 20px;
+  -webkit-margin-end: 20px;
+          margin-inline-end: 20px;
+}
+
+.articles_card .social_link {
+  width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #F5F5FA;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+}
+
+.articles_card .social_link:not(:nth-child(3)) {
+  margin-right: 15px;
+}
+
+.articles_card .social_link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.articles_card .advertising {
+  display: block;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.articles_card .advertising img {
+  display: block !important;
+  margin: auto;
+}
+
+.articles_card .advertising span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #B3B3BA;
 }
 
 .team {
@@ -2216,6 +2320,14 @@ img {
   position: absolute;
   top: 40%;
   left: -15px;
+}
+
+.team .page_text:not(.page_text__small-400):hover {
+  color: #F0145A;
+  font-weight: 700;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .team .page_nav__violet {
@@ -2747,6 +2859,10 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
+
+  .contacts .wrap_col__small {
+    margin-bottom: 30px;
+  }
 }
 
 @media all and (max-width: 635px) {
@@ -2929,6 +3045,11 @@ img {
     line-height: 1;
   }
 
+  .title_gradient__reverse {
+    font-size: 32px;
+    line-height: 1;
+  }
+
   .team_slider .title_gradient {
     font-size: 26px;
   }
@@ -2983,17 +3104,17 @@ img {
     margin-right: 0px;
   }
 
+  .team .wrap_col__big {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   .team_contacts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 
   .team .contact_link {
@@ -3002,10 +3123,6 @@ img {
 }
 
 @media all and (max-width: 440px) {
-  .title_gradient {
-    font-size: 23px;
-  }
-
   .contacts .title_gradient {
     font-size: 23px;
     line-height: 1;

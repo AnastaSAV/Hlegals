@@ -10,10 +10,8 @@
 			@include mmax(768) {
 				align-items: center;
 			}
-		}
-		&_col__big {
-			@include mmax(768) {
-		
+				@include mmax(768) {
+					margin-bottom: 30px;
 			}
 		}
 	}

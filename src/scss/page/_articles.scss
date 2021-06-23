@@ -67,7 +67,11 @@
 		padding-bottom: 20px;
 	}
 	&_date {
-		display: block;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $gray;
+		text-transform: uppercase;
 		padding-bottom: 10px;
 	}
 	&_text {
@@ -134,19 +138,78 @@
 // PublicationsCard
 .articles_card {
 	max-width: 900px;
-	margin: 0 auto;
+	margin: 0 auto 41px;
 	&_title {
-		font-size: 382px;
-		width: 500px;
-		line-height: 500;
+		font-size: 32px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: $main;
+	}
+	&_subtitle {
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 29px;
 		color: $main;
 	}
 	&_list {
-		counter-reset: section;
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 400;
+		color: $black;
+		counter-reset: item;
 		li::before {
-			counter-increment: section;
-			content: counter(section);
+			content: counter(item) ".";
+			counter-increment: item;
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 700;
+			color: $red;
+			padding-right: 10px;
 		}
 	}
-	
+	&_links {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		border-top: 4px solid #E6E6F0;
+		padding-top: 20px;
+	}
+	.articles_header {
+		margin-bottom: 40px;
+	}
+	.articles_text {
+		margin-inline-start: 20px;
+		margin-inline-end: 20px;
+	}
+	.social_link {
+		width: 42px;
+		height: 42px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #F5F5FA;
+		background-color: #F5F5FA;
+		border-radius: 12px;
+		&:not(:nth-child(3)) {
+			margin-right: 15px;
+		}
+		&:hover {
+			transform: scale(1.1);
+			transition: $trans;
+		}
+	}
+	.advertising {
+		display: block;
+		margin:0 auto 40px;
+		text-align: center;
+		  img {
+		display: block !important;
+		margin: auto;
+	}
+	span {
+		font-size: 16px;
+		line-height: 22px;
+		color: $gray;
+	}
+}
 }

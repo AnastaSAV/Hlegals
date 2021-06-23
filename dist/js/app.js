@@ -33,19 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
 				nav.toggleClass("show");
 		  });
 		   /** Adaptive */
-			var window_width = window.innerWidth || document.documentElement.clientWidth,
-			lgMax = 1199,
-			lgMin = 992,
-			mdMax = 991,
-			mdMin = 768,
-			smMin = 576,
-			xsMax = 575;
+	// 		var window_width = window.innerWidth || document.documentElement.clientWidth,
+	// 		lgMax = 1199,
+	// 		lgMin = 992,
+	// 		mdMax = 991,
+	// 		mdMin = 768,
+	// 		smMin = 576,
+	// 		xsMax = 575;
  
-	  $(window).resize(function () {
-			window_width = window_width = window.innerWidth || document.documentElement.clientWidth;
-			sliderTeam();
-			sliderAbout();
-		 });
+	//   $(window).resize(function () {
+	// 		window_width = window_width = window.innerWidth || document.documentElement.clientWidth;
+	// 		sliderTeam();
+	// 		sliderAbout();
+	// 	 });
 
 		 let sliderTeam = $(".team_slider_slick");
 		 $('.single-item').slick();
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 		
 		
-		if(document.documentElement.clientWidth>767){
+		// if(document.documentElement.clientWidth>767){
 			$(document).on('click', '.intro_link__wrapper', function(e){
 				e.preventDefault();
 				
@@ -170,6 +170,5 @@ document.addEventListener("DOMContentLoaded", function () {
 				parent.find('.intro_col__big').hide();
 				$('.intro_col__big#' + data).show();
 			})			
-		} 
 	});
 });
