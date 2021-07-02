@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					settings: {
 					  slidesToShow: 1,
 					  slidesToScroll: 4,
+					  centerMode: true,
 					}
 				 },
 				]

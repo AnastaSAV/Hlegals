@@ -714,16 +714,16 @@ img {
 
 .header_logo {
   display: block;
-  padding-top: 15px;
 }
 
 .header_logo__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: -40px;
 }
 
 .header_logo__main {
@@ -1500,6 +1500,15 @@ img {
   padding-top: 120px;
 }
 
+.section_shade {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  bottom: -14%;
+  left: 0;
+  z-index: 1;
+}
+
 .intro {
   margin-bottom: 80px;
 }
@@ -1523,6 +1532,10 @@ img {
   margin-bottom: 80px;
 }
 
+.intro_link__wrapper:not(:last-child) {
+  margin: 0 0 20px;
+}
+
 .intro_link {
   display: block;
   font-size: 42px;
@@ -1531,10 +1544,6 @@ img {
   text-align: right;
   color: #B3B3BA;
   position: relative;
-}
-
-.intro_link:not(:last-child) {
-  margin: 0 0 20px;
 }
 
 .intro_link:hover {
@@ -2375,6 +2384,11 @@ img {
   line-height: 30px;
   position: relative;
   padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.contacts_text:nth-child(2) {
+  padding-bottom: 0;
   margin-bottom: 20px;
 }
 
@@ -2389,13 +2403,19 @@ img {
   z-index: 1;
 }
 
-.contacts_text:nth-child(1)::after {
+.contacts .contact_link {
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.contacts .contact_link::after {
   content: '';
   width: 100%;
   height: 4px;
   background-color: #E6E6F0;
   position: absolute;
-  bottom: -70px;
+  bottom: 0;
   left: 0;
   z-index: 1;
 }
@@ -2404,10 +2424,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 57%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  max-width: 40%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
@@ -2518,6 +2542,7 @@ img {
   }
 
   .header_logo__inner {
+    margin-top: 0;
     margin-bottom: 15px;
   }
 
@@ -2582,8 +2607,13 @@ img {
     padding-top: 240px;
   }
 
+  .intro_link__wrapper:not(:last-child) {
+    margin: 0 0 10px;
+  }
+
   .intro_link {
     font-size: 32px;
+    line-height: 45px;
   }
 
   .intro_link:hover {
@@ -2592,6 +2622,12 @@ img {
 
   .intro_link.active_link {
     font-size: 32px;
+    line-height: 45px;
+  }
+
+  .intro_title {
+    font-size: 28px;
+    margin-bottom: 10px;
   }
 
   .intro_col__small {
@@ -2643,7 +2679,9 @@ img {
   }
 
   .contacts_link {
-    margin-top: 20px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%;
   }
 }
 
@@ -2740,11 +2778,6 @@ img {
 
   .intro_link::after {
     display: none;
-  }
-
-  .intro_title {
-    font-size: 28px;
-    margin-bottom: 10px;
   }
 
   .intro_wrap {
@@ -2855,13 +2888,23 @@ img {
   }
 
   .contacts .wrap_col__small {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    text-align: center;
   }
 
   .contacts .wrap_col__small {
     margin-bottom: 30px;
+  }
+
+  .contacts_link {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -2901,6 +2944,9 @@ img {
   }
 
   .header_logo__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 0;
   }
 
@@ -3140,6 +3186,10 @@ img {
 
   .header_contacts .tel::after {
     display: none;
+  }
+
+  .header_contacts .tel {
+    margin-right: 0;
   }
 
   .header_logo__main {

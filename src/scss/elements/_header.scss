@@ -118,6 +118,9 @@
 					display: none;
 				}
 			}
+			@include mmax(380) {
+				margin-right: 0;
+			}
 		}
 	}  // Contacts
 	&_wrapper {
@@ -132,14 +135,16 @@
 	}
 	&_logo {
 		display: block;
-		padding-top: 15px;
 		&__inner {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
+			margin-top: -40px;
 			@include mmax(992) {
+				margin-top: 0;
 				margin-bottom: 15px;
 			}
 			@include mmax(576) {
+				align-items: center;
 				margin-bottom: 0;
 			}
 		}
