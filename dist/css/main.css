@@ -2528,6 +2528,10 @@ img {
     font-size: 18px;
   }
 
+  .header_inner {
+    padding: 20px 0px 20px;
+  }
+
   .header_info {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
